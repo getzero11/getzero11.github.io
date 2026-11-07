@@ -3,561 +3,311 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Viren Konde: AI Engineer &amp; Builder</title>
-  <meta name="description" content="Viren Konde: AI engineer building agentic systems for research and healthcare data. Biology background, 100+ research reports, 10+ AI products, open to collaborations.">
-  <meta property="og:title" content="Viren Konde: AI Engineer &amp; Builder">
-  <meta property="og:description" content="Agentic AI systems for research, healthcare data and the web.">
-  <meta property="og:type" content="profile">
+  <title>iHealthcareAnalyst Research Library | Market Intelligence &amp; Consulting</title>
+  <meta name="description" content="Healthcare market research reports, analyst insights and press releases across animal health, biotechnology, pharmaceuticals, diagnostics, hospital equipment, healthcare IT and services.">
+  <meta property="og:title" content="iHealthcareAnalyst Research Library">
+  <meta property="og:description" content="A structured library of healthcare market intelligence, analyst insights and published reports.">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://getzero11.github.io/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet">
   <style>
 :root {
-  --bg: #faf8f3;
-  --surface: #ffffff;
-  --ink: #15181b;
-  --muted: #5f656c;
-  --line: #e3ded3;
-  --accent: #0b6b5b;
-  --accent-soft: #e7f1ee;
-  --gold: #b07c1e;
-  --gold-soft: rgba(176, 124, 30, 0.1);
-  --shadow: 0 18px 40px rgba(21, 24, 27, 0.07);
-  --serif: 'Instrument Serif', Georgia, 'Times New Roman', serif;
-  --sans: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  --mono: 'JetBrains Mono', ui-monospace, 'SFMono-Regular', Consolas, monospace;
+  --paper: #f5f3ed;
+  --panel: #fffefa;
+  --ink: #18231f;
+  --muted: #69736c;
+  --rule: #d9ddd5;
+  --accent: #146b5d;
+  --accent-deep: #0e4d44;
+  --accent-wash: #dcece5;
+  --signal: #c98236;
+  --shadow: 0 20px 50px rgba(24, 35, 31, .08);
+  --display: 'Newsreader', Georgia, serif;
+  --body: 'DM Sans', system-ui, sans-serif;
+  --mono: 'DM Mono', ui-monospace, monospace;
 }
-
 [data-theme="dark"] {
-  --bg: #101413;
-  --surface: #161b1a;
-  --ink: #edeae2;
-  --muted: #a0a7a4;
-  --line: #2a302e;
-  --accent: #63c6b0;
-  --accent-soft: #16332d;
-  --gold: #d9a441;
-  --gold-soft: rgba(217, 164, 65, 0.12);
-  --shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+  --paper: #111816;
+  --panel: #18211e;
+  --ink: #eef1eb;
+  --muted: #a2aea7;
+  --rule: #2b3833;
+  --accent: #70c6ae;
+  --accent-deep: #98e0c8;
+  --accent-wash: #193d34;
+  --signal: #e1a05d;
+  --shadow: 0 20px 50px rgba(0, 0, 0, .3);
 }
-
-* { margin: 0; padding: 0; box-sizing: border-box; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 body {
-  font-family: var(--sans); font-size: 16px; line-height: 1.65;
-  color: var(--ink); background: var(--bg);
-  -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
+  background: var(--paper); color: var(--ink); font-family: var(--body);
+  line-height: 1.6; -webkit-font-smoothing: antialiased;
 }
-::selection { background: var(--accent); color: var(--bg); }
 a { color: inherit; }
-.wrap { max-width: 1120px; margin: 0 auto; padding: 0 28px; }
-.skip {
-  position: absolute; left: 16px; top: -60px;
-  background: var(--ink); color: var(--bg); padding: 10px 14px; z-index: 100;
-  font-family: var(--mono); font-size: 12px; text-decoration: none;
-}
-.skip:focus { top: 16px; }
+button, input, select { font: inherit; }
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.wrap { width: min(1180px, calc(100% - 48px)); margin: 0 auto; }
+.skip { position: absolute; top: -60px; left: 16px; z-index: 100; padding: 10px 14px; background: var(--ink); color: var(--paper); text-decoration: none; font-family: var(--mono); font-size: 12px; }
+.skip:focus { top: 16px; }
 
-.site-head {
-  position: sticky; top: 0; z-index: 50;
-  background: color-mix(in srgb, var(--bg) 88%, transparent);
-  backdrop-filter: blur(14px); border-bottom: 1px solid var(--line);
+/* The top bar is deliberately spare: it feels like a library catalogue, not a product landing page. */
+.site-header { position: sticky; top: 0; z-index: 20; background: color-mix(in srgb, var(--paper) 91%, transparent); backdrop-filter: blur(16px); border-bottom: 1px solid var(--rule); }
+.header-inner { display: flex; min-height: 70px; align-items: center; justify-content: space-between; gap: 24px; }
+.wordmark { display: inline-flex; align-items: center; gap: 11px; text-decoration: none; }
+.wordmark-mark { width: 29px; height: 29px; display: grid; place-items: center; background: var(--accent); color: var(--paper); font-family: var(--display); font-size: 18px; border-radius: 50%; }
+.wordmark-text { font-family: var(--mono); font-size: 11px; font-weight: 500; letter-spacing: .09em; text-transform: uppercase; }
+.nav { display: flex; align-items: center; gap: 28px; }
+.nav a { font-family: var(--mono); font-size: 10px; letter-spacing: .11em; text-transform: uppercase; color: var(--muted); text-decoration: none; }
+.nav a:hover { color: var(--accent); }
+.theme-toggle { width: 35px; height: 35px; border: 1px solid var(--rule); border-radius: 50%; background: transparent; color: var(--ink); cursor: pointer; font-size: 15px; transition: transform .2s, border-color .2s; }
+.theme-toggle:hover { transform: rotate(18deg); border-color: var(--accent); }
+
+/* Hero: the large live count and taxonomy are the signature, making the corpus itself the hero. */
+.hero { padding: 92px 0 76px; border-bottom: 1px solid var(--rule); }
+.hero-grid { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(340px, .95fr); gap: 82px; align-items: end; }
+.kicker { display: flex; align-items: center; gap: 12px; color: var(--accent); font-family: var(--mono); font-size: 10px; letter-spacing: .15em; text-transform: uppercase; margin-bottom: 23px; }
+.kicker::before { width: 32px; height: 1px; background: var(--accent); content: ''; }
+h1 { max-width: 660px; font-family: var(--display); font-size: clamp(3.1rem, 7vw, 6.35rem); font-weight: 400; line-height: .92; letter-spacing: -.045em; }
+.hero-lede { max-width: 570px; margin-top: 26px; color: var(--muted); font-size: 1.08rem; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 30px; }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 43px; padding: 0 17px; border: 1px solid var(--ink); color: var(--ink); font-family: var(--mono); font-size: 10px; letter-spacing: .09em; text-transform: uppercase; text-decoration: none; transition: background .2s, color .2s, border-color .2s; }
+.btn:hover { border-color: var(--accent); background: var(--accent); color: var(--paper); }
+.btn-primary { border-color: var(--accent); background: var(--accent); color: var(--paper); }
+.btn-primary:hover { border-color: var(--accent-deep); background: var(--accent-deep); }
+.hero-note { margin-top: 22px; color: var(--muted); font-family: var(--mono); font-size: 10px; letter-spacing: .04em; }
+.hero-note strong { color: var(--ink); font-weight: 500; }
+.taxonomy { border: 1px solid var(--rule); background: var(--panel); box-shadow: var(--shadow); }
+.taxonomy-head { display: flex; align-items: center; justify-content: space-between; padding: 17px 20px; border-bottom: 1px solid var(--rule); }
+.taxonomy-head span:first-child { font-family: var(--mono); font-size: 10px; letter-spacing: .13em; text-transform: uppercase; color: var(--muted); }
+.live-dot { display: inline-flex; align-items: center; gap: 7px; color: var(--accent); font-family: var(--mono); font-size: 9px; letter-spacing: .1em; text-transform: uppercase; }
+.live-dot::before { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); content: ''; box-shadow: 0 0 0 4px var(--accent-wash); }
+.taxonomy-list { list-style: none; }
+.taxonomy-list li { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; padding: 13px 20px; border-bottom: 1px solid var(--rule); }
+.taxonomy-list li:last-child { border-bottom: 0; }
+.taxonomy-list a { font-family: var(--display); font-size: 1.24rem; text-decoration: none; }
+.taxonomy-list a:hover { color: var(--accent); }
+.taxonomy-count { color: var(--muted); font-family: var(--mono); font-size: 10px; }
+
+/* Stats */
+.stats { padding: 27px 0; border-bottom: 1px solid var(--rule); }
+.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+.stat strong { display: block; font-family: var(--display); font-size: 2.65rem; font-weight: 400; line-height: 1; }
+.stat span { display: block; max-width: 18ch; margin-top: 8px; color: var(--muted); font-family: var(--mono); font-size: 9px; letter-spacing: .1em; line-height: 1.55; text-transform: uppercase; }
+
+/* Library */
+.library { padding: 84px 0 110px; }
+.library-head { display: flex; align-items: end; justify-content: space-between; gap: 24px; margin-bottom: 34px; }
+.section-kicker { color: var(--accent); font-family: var(--mono); font-size: 10px; letter-spacing: .15em; text-transform: uppercase; }
+.library-title { margin-top: 7px; font-family: var(--display); font-size: clamp(2.3rem, 4vw, 3.7rem); font-weight: 400; line-height: .98; letter-spacing: -.035em; }
+.library-source { max-width: 290px; color: var(--muted); font-size: .84rem; text-align: right; }
+.library-source a { color: var(--accent); text-underline-offset: 3px; }
+.controls { display: grid; grid-template-columns: minmax(240px, 1fr) 190px 190px; gap: 10px; padding: 13px; border: 1px solid var(--rule); background: var(--panel); }
+.control { min-height: 43px; border: 1px solid var(--rule); background: var(--paper); color: var(--ink); padding: 0 13px; }
+.control:focus { border-color: var(--accent); outline: none; }
+.search-wrap { position: relative; }
+.search-wrap::before { position: absolute; top: 13px; left: 14px; color: var(--muted); content: '⌕'; font-size: 18px; line-height: 1; }
+.search { width: 100%; padding-left: 38px; }
+.results-bar { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin: 26px 0 14px; }
+.results-label { color: var(--muted); font-family: var(--mono); font-size: 10px; letter-spacing: .08em; text-transform: uppercase; }
+.results-label strong { color: var(--ink); font-weight: 500; }
+.results-tip { color: var(--muted); font-size: .82rem; }
+.catalog { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.card { min-height: 220px; display: flex; flex-direction: column; padding: 22px; border: 1px solid var(--rule); background: var(--panel); text-decoration: none; transition: transform .2s, border-color .2s, box-shadow .2s; }
+.card:hover { border-color: var(--accent); box-shadow: var(--shadow); transform: translateY(-3px); }
+.card-meta { display: flex; align-items: center; justify-content: space-between; gap: 10px; color: var(--accent); font-family: var(--mono); font-size: 9px; letter-spacing: .1em; text-transform: uppercase; }
+.card-type { color: var(--signal); }
+.card h3 { margin: 24px 0 auto; font-family: var(--display); font-size: 1.45rem; font-weight: 400; line-height: 1.08; letter-spacing: -.015em; }
+.card-foot { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 22px; padding-top: 12px; border-top: 1px solid var(--rule); color: var(--muted); font-family: var(--mono); font-size: 9px; letter-spacing: .06em; text-transform: uppercase; }
+.card-arrow { color: var(--accent); font-size: 16px; }
+.empty { grid-column: 1 / -1; padding: 50px 20px; border: 1px dashed var(--rule); color: var(--muted); text-align: center; }
+.load-more { display: flex; justify-content: center; margin-top: 30px; }
+
+/* Footer */
+.site-footer { padding: 30px 0; border-top: 1px solid var(--rule); }
+.footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.footer-copy, .footer-links { color: var(--muted); font-family: var(--mono); font-size: 9px; letter-spacing: .09em; line-height: 1.6; text-transform: uppercase; }
+.footer-links { display: flex; gap: 18px; }
+.footer-links a { color: var(--accent); text-decoration: none; }
+.footer-links a:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+@media (max-width: 900px) {
+  .hero-grid { grid-template-columns: 1fr; gap: 44px; }
+  .taxonomy { max-width: 580px; }
+  .catalog { grid-template-columns: repeat(2, 1fr); }
 }
-.head-inner { display: flex; align-items: center; justify-content: space-between; height: 64px; }
-.brand { font-family: var(--serif); font-size: 1.55rem; line-height: 1; text-decoration: none; }
-.brand span { color: var(--accent); }
-.site-nav { display: flex; gap: 26px; }
-.site-nav a {
-  font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.13em;
-  text-transform: uppercase; text-decoration: none; color: var(--muted);
-  padding: 4px 0; border-bottom: 1px solid transparent;
-  transition: color 0.18s ease, border-color 0.18s ease;
+@media (max-width: 640px) {
+  .wrap { width: min(100% - 32px, 1180px); }
+  .header-inner { min-height: 60px; }
+  .nav a { display: none; }
+  .hero { padding: 62px 0 54px; }
+  .hero-lede { font-size: 1rem; }
+  .stats-grid { grid-template-columns: 1fr 1fr; gap: 25px 16px; }
+  .stat strong { font-size: 2.2rem; }
+  .library { padding: 62px 0 80px; }
+  .library-head { display: block; }
+  .library-source { margin-top: 16px; text-align: left; }
+  .controls { grid-template-columns: 1fr; }
+  .results-bar { display: block; }
+  .results-tip { margin-top: 7px; }
+  .catalog { grid-template-columns: 1fr; }
+  .card { min-height: 190px; }
+  .footer-inner { align-items: start; flex-direction: column; }
 }
-.site-nav a:hover { color: var(--ink); border-bottom-color: var(--accent); }
-.theme-toggle {
-  width: 34px; height: 34px; border-radius: 50%;
-  border: 1px solid var(--line); background: transparent; color: var(--ink);
-  font-size: 14px; cursor: pointer; line-height: 1;
-  transition: border-color 0.18s ease, transform 0.3s ease;
-}
-.theme-toggle:hover { border-color: var(--accent); transform: rotate(90deg); }
-
-.hero { padding: 92px 0 76px; }
-.hero-grid { display: grid; grid-template-columns: 1.4fr 0.85fr; gap: 64px; align-items: end; }
-.eyebrow {
-  font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.14em;
-  text-transform: uppercase; color: var(--accent);
-  display: flex; align-items: center; gap: 12px; margin-bottom: 22px;
-}
-.eyebrow::before { content: ""; width: 30px; height: 1px; background: var(--accent); }
-h1 {
-  font-family: var(--serif); font-weight: 400;
-  font-size: clamp(2.8rem, 6vw, 4.4rem);
-  line-height: 0.94; letter-spacing: -0.025em; margin-bottom: 24px;
-}
-.lede { font-size: clamp(1.25rem, 2vw, 1.5rem); line-height: 1.4; max-width: 30ch; margin-bottom: 18px; }
-.lede em { font-family: var(--serif); font-style: italic; color: var(--accent); font-size: 1.08em; }
-.sub { color: var(--muted); max-width: 54ch; margin-bottom: 32px; }
-.cta-row { display: flex; flex-wrap: wrap; gap: 10px; }
-.btn {
-  font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.11em;
-  text-transform: uppercase; text-decoration: none;
-  padding: 14px 20px; border: 1px solid var(--ink); color: var(--ink);
-  background: transparent; transition: all 0.18s ease; display: inline-block;
-}
-.btn:hover { background: var(--accent); border-color: var(--accent); color: var(--bg); }
-.btn-primary { background: var(--ink); color: var(--bg); }
-.btn-primary:hover { background: var(--accent); border-color: var(--accent); color: var(--bg); }
-.meta-row {
-  list-style: none; display: flex; flex-wrap: wrap; gap: 22px; margin-top: 30px;
-  font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.08em;
-  text-transform: uppercase; color: var(--muted);
-}
-.meta-row li { display: flex; align-items: center; gap: 8px; }
-.meta-row li::before { content: ""; width: 5px; height: 5px; border-radius: 50%; background: var(--accent); }
-
-/* Terminal card */
-.terminal {
-  background: #0f1514; color: #d7e3df; border: 1px solid #22302d;
-  border-radius: 6px; padding: 22px; font-family: var(--mono);
-  font-size: 12.5px; line-height: 1.7; box-shadow: var(--shadow);
-}
-.terminal-bar { display: flex; gap: 6px; margin-bottom: 18px; }
-.terminal-bar span { width: 9px; height: 9px; border-radius: 50%; background: #33413d; }
-.terminal-bar span:nth-child(1) { background: #d97c5f; }
-.terminal-bar span:nth-child(2) { background: #d9b25f; }
-.terminal-bar span:nth-child(3) { background: #63c6b0; }
-.terminal p { margin: 0 0 8px; }
-.terminal .prompt { color: #63c6b0; }
-.terminal .cmd { color: #ffffff; }
-.terminal .out { color: #9fb3ad; }
-.terminal .key { color: #d9b25f; }
-.terminal .gap { margin-bottom: 16px; }
-
-.proof { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: var(--surface); padding: 36px 0; }
-.proof-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; }
-.proof-grid strong { display: block; font-family: var(--serif); font-weight: 400; font-size: 2.4rem; line-height: 1; margin-bottom: 8px; }
-.proof-grid span { font-family: var(--mono); font-size: 9.5px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); line-height: 1.6; display: block; max-width: 17ch; }
-.coverage { margin-top: 26px; padding-top: 18px; border-top: 1px solid var(--line); }
-.coverage .label { display: block; margin-bottom: 6px; font-family: var(--mono); font-size: 9.5px; letter-spacing: 0.13em; text-transform: uppercase; color: var(--accent); }
-.coverage p { color: var(--muted); font-family: var(--mono); font-size: 10px; letter-spacing: 0.04em; text-transform: uppercase; line-height: 1.8; }
-
-.section { padding: 88px 0; border-top: 1px solid var(--line); }
-.section-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 22px; margin-bottom: 48px; }
-.section-head .num { font-family: var(--mono); font-size: 11px; letter-spacing: 0.12em; color: var(--accent); padding-top: 8px; }
-.section-head h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(1.7rem, 3vw, 2.35rem); line-height: 1.05; letter-spacing: -0.015em; }
-.section-note { color: var(--muted); font-size: 0.92rem; flex-basis: 100%; max-width: 62ch; }
-
-.about-grid { display: grid; grid-template-columns: 1.05fr 1fr; gap: 56px; }
-.about-lead { font-family: var(--serif); font-size: clamp(1.6rem, 2.6vw, 2.05rem); line-height: 1.25; letter-spacing: -0.01em; }
-.about-body p { color: var(--muted); margin-bottom: 18px; }
-.about-body p:last-child { margin-bottom: 0; }
-.history { max-width: 80ch; }
-.history p { color: var(--muted); margin-bottom: 18px; }
-.history p:last-child { margin-bottom: 0; }
-.history p:first-child { color: var(--ink); }
-
-.project {
-  background: var(--surface); border: 1px solid var(--line);
-  border-radius: 4px; padding: 30px;
-  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
-}
-.project:hover { transform: translateY(-3px); box-shadow: var(--shadow); border-color: var(--accent); }
-.project-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
-.idx { font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.1em; color: var(--muted); }
-.project-link { font-family: var(--mono); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid transparent; padding-bottom: 2px; }
-.project-link:hover { border-bottom-color: var(--accent); }
-.project-links { display: flex; gap: 12px; }
-.project h3 { font-family: var(--serif); font-weight: 400; font-size: 1.65rem; line-height: 1.15; margin-bottom: 12px; letter-spacing: -0.01em; }
-.project-desc { color: var(--muted); font-size: 0.92rem; margin-bottom: 18px; }
-.outcome { display: flex; flex-wrap: wrap; gap: 6px 10px; align-items: baseline; padding: 12px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); font-size: 0.88rem; margin-bottom: 18px; }
-.outcome span { font-family: var(--mono); font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); flex: none; }
-.tags { list-style: none; display: flex; flex-wrap: wrap; gap: 6px; }
-.tags li { font-family: var(--mono); font-size: 9.5px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); border: 1px solid var(--line); padding: 4px 8px; }
-.project-featured { margin-bottom: 20px; padding: 38px; }
-.project-featured h3 { font-size: 2rem; }
-.project-featured .project-desc { max-width: 78ch; }
-.project-featured .outcome { max-width: 78ch; }
-.project-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-
-.skills-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 36px; }
-.skills-grid.five { grid-template-columns: repeat(5, 1fr); gap: 26px; }
-.skill-col h3 { font-family: var(--mono); font-size: 10px; letter-spacing: 0.13em; text-transform: uppercase; color: var(--accent); padding-bottom: 12px; border-bottom: 1px solid var(--ink); margin-bottom: 4px; }
-.skill-col ul { list-style: none; }
-.skill-col li { padding: 9px 0; border-bottom: 1px solid var(--line); font-size: 0.86rem; }
-.foundations { margin-top: 36px; padding-top: 22px; border-top: 1px solid var(--line); }
-.foundations .label { display: block; font-family: var(--mono); font-size: 10px; letter-spacing: 0.13em; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; }
-.foundations p { color: var(--muted); font-size: 0.88rem; max-width: 92ch; }
-
-.timeline { border-top: 1px solid var(--line); }
-.tl-item { display: grid; grid-template-columns: 200px 1fr; gap: 32px; padding: 26px 0; border-bottom: 1px solid var(--line); }
-.tl-when { font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); padding-top: 6px; }
-.tl-body h3, .edu-item h3 { font-family: var(--serif); font-weight: 400; font-size: 1.4rem; line-height: 1.2; margin-bottom: 4px; }
-.tl-org { font-family: var(--mono); font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; }
-.tl-desc { color: var(--muted); font-size: 0.9rem; max-width: 66ch; }
-.edu { margin-top: 44px; border-top: 1px solid var(--line); }
-.edu-item { display: grid; grid-template-columns: 200px 1fr; gap: 32px; padding: 22px 0; border-bottom: 1px solid var(--line); }
-
-.log { border-top: 1px solid var(--line); }
-.log-item { display: grid; grid-template-columns: 160px 1fr; gap: 32px; padding: 20px 0; border-bottom: 1px solid var(--line); align-items: baseline; }
-.log-date { font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); }
-.log-item h3 { font-family: var(--serif); font-weight: 400; font-size: 1.3rem; line-height: 1.2; margin-bottom: 2px; }
-.log-item p { color: var(--muted); font-size: 0.88rem; }
-.hackathon { display: grid; grid-template-columns: 360px 1fr; gap: 28px; align-items: center; margin-top: 34px; }
-.hackathon img { width: 100%; height: auto; display: block; border: 1px solid var(--line); border-radius: 4px; }
-.hackathon h3 { font-family: var(--serif); font-weight: 400; font-size: 1.5rem; line-height: 1.2; margin: 6px 0 8px; }
-.hackathon p { color: var(--muted); font-size: 0.9rem; max-width: 52ch; }
-.hackathon .label { font-family: var(--mono); font-size: 10px; letter-spacing: 0.13em; text-transform: uppercase; color: var(--accent); }
-.certificate { margin: 18px 0 0; padding-top: 16px; border-top: 1px solid var(--line); }
-.certificate img { display: block; width: min(100%, 260px); height: auto; border: 1px solid var(--line); border-radius: 3px; }
-.certificate figcaption { margin-top: 8px; color: var(--muted); font-family: var(--mono); font-size: 9px; letter-spacing: 0.04em; text-transform: uppercase; line-height: 1.5; }
-
-.todo { color: var(--gold); background: var(--gold-soft); border-bottom: 1px dashed var(--gold); padding: 0 3px; font-family: var(--mono); font-size: 0.82em; letter-spacing: 0.02em; white-space: nowrap; }
-
-.contact { background: var(--ink); color: var(--bg); padding: 92px 0; }
-.contact .num { font-family: var(--mono); font-size: 11px; letter-spacing: 0.12em; color: var(--accent); display: block; margin-bottom: 20px; }
-.contact h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(1.7rem, 3vw, 2.35rem); line-height: 1.1; letter-spacing: -0.015em; max-width: 34ch; margin-bottom: 20px; }
-.contact p { color: color-mix(in srgb, var(--bg) 70%, transparent); max-width: 58ch; margin-bottom: 32px; }
-.contact-modal[hidden] { display: none; }
-.contact-modal { position: fixed; inset: 0; z-index: 100; display: grid; place-items: center; padding: 24px; background: rgba(15, 21, 20, 0.72); }
-.contact-dialog { position: relative; width: min(100%, 440px); padding: 34px; background: var(--surface); color: var(--ink); border: 1px solid var(--line); border-radius: 6px; box-shadow: var(--shadow); }
-.contact-dialog h2 { font-family: var(--serif); font-weight: 400; font-size: 2.15rem; line-height: 1.1; margin: 8px 0 10px; }
-.contact-dialog p { color: var(--muted); margin-bottom: 24px; }
-.contact-close { position: absolute; top: 14px; right: 16px; border: 0; background: transparent; color: var(--muted); font-size: 26px; line-height: 1; cursor: pointer; }
-.contact-close:hover { color: var(--ink); }
-.contact-mail { text-align: center; }
-.btn-light { background: var(--bg); border-color: var(--bg); color: var(--ink); }
-.btn-light:hover { background: var(--accent); border-color: var(--accent); color: var(--bg); }
-.btn-ghost { border-color: color-mix(in srgb, var(--bg) 40%, transparent); color: var(--bg); }
-.btn-ghost:hover { background: var(--bg); border-color: var(--bg); color: var(--ink); }
-
-.site-foot { border-top: 1px solid var(--line); padding: 24px 0; }
-.foot-inner { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; font-family: var(--mono); font-size: 9.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
-.foot-inner a { color: var(--accent); text-decoration: none; }
-.foot-inner a:hover { text-decoration: underline; }
-
-.reveal { opacity: 1; transform: none; }
-.js .reveal { opacity: 0; transform: translateY(14px); transition: opacity 0.6s ease, transform 0.6s ease; }
-.js .reveal.in { opacity: 1; transform: none; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .js .reveal { opacity: 1; transform: none; transition: none; }
-  .project, .theme-toggle { transition: none; }
-}
-@media (max-width: 960px) {
-  .hero-grid { grid-template-columns: 1fr; gap: 44px; }
-  .terminal { max-width: 560px; }
-  .about-grid { grid-template-columns: 1fr; gap: 28px; }
-  .skills-grid, .skills-grid.five { grid-template-columns: 1fr 1fr; gap: 32px; }
-  .proof-grid { grid-template-columns: 1fr 1fr; gap: 24px; }
-  .section-head { margin-bottom: 36px; }
-}
-@media (max-width: 720px) {
-  .site-nav { display: none; }
-  .hero { padding: 64px 0 56px; }
-  .section { padding: 64px 0; }
-  .project-grid { grid-template-columns: 1fr; }
-  .tl-item, .edu-item, .log-item { grid-template-columns: 1fr; gap: 8px; }
-  .hackathon { grid-template-columns: 1fr; }
-  .project-featured { padding: 26px; }
-  .project { padding: 26px; }
-  .contact { padding: 64px 0; }
-  .proof-grid strong { font-size: 2rem; }
-}
-@media (max-width: 460px) {
-  .skills-grid, .skills-grid.five { grid-template-columns: 1fr; }
-  .meta-row { flex-direction: column; gap: 10px; }
-  .btn { width: 100%; text-align: center; }
+  .card, .theme-toggle, .btn { transition: none; }
 }
   </style>
 </head>
 <body>
-  <a class="skip" href="#main">Skip to content</a>
-
-  <header class="site-head">
-    <div class="wrap head-inner">
-      <a class="brand" href="#top" aria-label="Viren Konde, home">VK<span>.</span></a>
-      <nav class="site-nav" aria-label="Primary">
-        <a href="#about">About</a>
-        <a href="#work">Work</a>
-        <a href="#stack">Stack</a>
-        <a href="#contact">Collaborate</a>
+  <a class="skip" href="#library">Skip to research library</a>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="wordmark" href="#top" aria-label="iHealthcareAnalyst research library home">
+        <span class="wordmark-mark">i</span><span class="wordmark-text">iHealthcareAnalyst / library</span>
+      </a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="#library">Library</a>
+        <a href="https://www.ihealthcareanalyst.com/" target="_blank" rel="noopener">Consulting ↗</a>
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false">◐</button>
       </nav>
-      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle colour theme" aria-pressed="false">◐</button>
     </div>
   </header>
 
-  <main id="main">
-    <section class="hero" id="top">
+  <main id="top">
+    <section class="hero">
       <div class="wrap hero-grid">
-        <div class="hero-copy reveal">
-          <p class="eyebrow">AI engineering · Agents · Research automation</p>
-          <h1>Viren Konde</h1>
-          <p class="lede">I build <em>agentic AI</em> systems for research, healthcare data and the web.</p>
-          <p class="sub">Biology background, years of healthcare market research, and 10+ shipped AI products. I care about systems that produce defensible answers, not just demos.</p>
-          <div class="cta-row">
-            <a class="btn btn-primary" href="https://github.com/getzero11" target="_blank" rel="noopener">See the code</a>
-            <a class="btn" href="#contact" data-contact>Email me</a>
-            <a class="btn" href="https://www.linkedin.com/in/virenkonde" target="_blank" rel="noopener">LinkedIn ↗</a>
+        <div>
+          <p class="kicker">Healthcare market intelligence</p>
+          <h1>Evidence for the decisions that move healthcare forward.</h1>
+          <p class="hero-lede">A structured index of analyst insights, press releases and published market research reports from iHealthcareAnalyst, covering the markets, technologies and services shaping life sciences.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#library">Explore the library ↓</a>
+            <a class="btn" href="https://www.ihealthcareanalyst.com/research-services/" target="_blank" rel="noopener">Research services ↗</a>
           </div>
-          <ul class="meta-row">
-            <li>Pune, India</li>
-            <li>Open to collaborations</li>
-          </ul>
+          <p class="hero-note">Source of record: <strong>iHealthcareAnalyst.com</strong> · backlinks preserved on every title</p>
         </div>
-
-        <aside class="terminal reveal" aria-label="Current focus">
-          <div class="terminal-bar" aria-hidden="true"><span></span><span></span><span></span></div>
-          <p><span class="prompt">$</span> <span class="cmd">whoami</span></p>
-          <p class="out">AI systems builder, biology : market research : software</p>
-          <p class="gap"></p>
-          <p><span class="prompt">$</span> <span class="cmd">currently</span></p>
-          <p class="out">agent platforms on n8n, FastAPI and MCP</p>
-          <p class="out">research agents and data dashboards</p>
-          <p class="out">local models with Ollama and Qwen</p>
-          <p class="gap"></p>
-          <p><span class="prompt">$</span> <span class="cmd">stack</span></p>
-          <p class="out">typescript · python · next.js · n8n · mcp</p>
+        <aside class="taxonomy" aria-label="Research domains">
+          <div class="taxonomy-head"><span>Research map</span><span class="live-dot">Live index</span></div>
+          <ul class="taxonomy-list" id="taxonomy-list"></ul>
         </aside>
       </div>
     </section>
 
-    <section class="proof" aria-label="At a glance">
-      <div class="wrap proof-grid">
-        <div class="reveal"><strong>10+</strong><span>years in healthcare research</span></div>
-        <div class="reveal"><strong>100+</strong><span>published research reports</span></div>
-        <div class="reveal"><strong>10+</strong><span>AI products &amp; tools built</span></div>
-        <div class="reveal"><strong>10+</strong><span>domains &amp; subdomains covered</span></div>
-      </div>
-      <div class="wrap coverage reveal">
-        <span class="label">Domains &amp; subdomains</span>
-        <p>Healthcare · market research · consulting · animal health · biotechnology · clinical diagnostics · healthcare IT · healthcare services · medical devices · hospital equipment · pharmaceuticals</p>
+    <section class="stats" aria-label="Library statistics">
+      <div class="wrap stats-grid">
+        <div class="stat"><strong id="stat-total">1,511</strong><span>indexed titles</span></div>
+        <div class="stat"><strong id="stat-insights">681</strong><span>analyst insights &amp; press releases</span></div>
+        <div class="stat"><strong id="stat-reports">830</strong><span>published reports</span></div>
+        <div class="stat"><strong>7</strong><span>healthcare subdomains</span></div>
       </div>
     </section>
 
-    <section class="section" id="about">
+    <section class="library" id="library">
       <div class="wrap">
-        <div class="section-head reveal">
-          <span class="num">01</span>
-          <h2>About</h2>
-        </div>
-        <div class="about-grid">
-          <p class="about-lead reveal">Biotechnology taught me to ask better questions. Research taught me to defend the answers. Software lets me repeat them.</p>
-          <div class="about-body reveal">
-  <p>My path ran from biotechnology and molecular biology research, to postdoctoral molecular bacteriology and neuroscience through healthcare market research, and into building AI agentic systems. I have published 100+ research reports across medical devices, pharmaceuticals, diagnostics and digital health.</p>
-            <p>Before building AI products, I worked across scientific research, biotechnology R&amp;D, technology commercialisation, teaching and healthcare consulting. That mix gives me a practical view of how research becomes a product: from evidence and validation to market context, delivery and collaboration.</p>
+        <div class="library-head">
+          <div>
+            <p class="section-kicker">The index</p>
+            <h2 class="library-title">Research library</h2>
           </div>
+          <p class="library-source">Browse by subject, search by title, and follow every result to its canonical publication on <a href="https://www.ihealthcareanalyst.com/" target="_blank" rel="noopener">iHealthcareAnalyst.com</a>.</p>
         </div>
-      </div>
-    </section>
-
-    <section class="section" id="work">
-      <div class="wrap">
-        <div class="section-head reveal">
-          <span class="num">02</span>
-          <h2>Selected work</h2>
-          <p class="section-note">Five repositories: one arc from research reports to the systems that generate them.</p>
+        <div class="controls" role="search">
+          <div class="search-wrap"><input class="control search" id="search" type="search" placeholder="Search reports, technologies, conditions..." autocomplete="off"></div>
+          <select class="control" id="category" aria-label="Filter by healthcare domain"><option value="all">All domains</option></select>
+          <select class="control" id="type" aria-label="Filter by publication type"><option value="all">All publications</option><option value="Report">Published reports</option><option value="Insight">Analyst insights &amp; press</option></select>
         </div>
-
-        <article class="project project-featured reveal">
-          <div class="project-top">
-            <span class="idx">01</span>
-            <a class="project-link" href="https://github.com/getzero11/ai-automation-stack" target="_blank" rel="noopener">GitHub ↗</a>
-          </div>
-          <h3>AI Automation Stack</h3>
-          <p class="project-desc">A self-contained agent platform that runs anywhere: n8n for orchestration, Claude Code with an MCP control layer, a FastAPI agent API, local Qwen models through Ollama, and Supabase for durable state. Packaged for Docker and Hugging Face Spaces.</p>
-          <p class="outcome"><span>Outcome</span>One stack for building and running agent workflows without stitching five vendors together.</p>
-          <ul class="tags">
-            <li>n8n</li><li>Claude Code</li><li>MCP</li><li>FastAPI</li><li>Ollama / Qwen</li><li>Supabase</li><li>Docker</li>
-          </ul>
-        </article>
-
-        <div class="project-grid">
-          <article class="project reveal">
-            <div class="project-top">
-              <span class="idx">02</span>
-              <span class="project-links">
-                <a class="project-link" href="https://healthcare-research-agent.vercel.app/" target="_blank" rel="noopener">Live ↗</a>
-                <a class="project-link" href="https://github.com/getzero11/healthcare-research-agent" target="_blank" rel="noopener">GitHub ↗</a>
-              </span>
-            </div>
-            <h3>Healthcare Research Agent</h3>
-            <p class="project-desc">Brief in, report out: market sizing, competitive analysis and forecasts, with generated infographics, PDF assembly, email delivery and Google Drive storage. Next.js 14 front end, n8n and DeepSeek behind it.</p>
-            <p class="outcome"><span>Outcome</span>Automates the full desk-research-to-deliverable pipeline.</p>
-            <ul class="tags"><li>Next.js 14</li><li>TypeScript</li><li>Tailwind</li><li>n8n</li><li>DeepSeek</li><li>Puppeteer</li><li>Vercel</li></ul>
-          </article>
-
-          <article class="project reveal">
-            <div class="project-top">
-              <span class="idx">03</span>
-              <span class="project-links">
-                <a class="project-link" href="https://cure-cancer-ai-dashboard.vercel.app/" target="_blank" rel="noopener">Live ↗</a>
-                <a class="project-link" href="https://github.com/getzero11/cure-cancer-ai-dashboard" target="_blank" rel="noopener">GitHub ↗</a>
-              </span>
-            </div>
-            <h3>Cure Cancer AI Dashboard</h3>
-            <p class="project-desc">Oncology signals across PubMed, FDA and ClinicalTrials.gov, with cancer-type and cross-source filters. The Cure Cancer AI Dashboard was submitted for the Omnirush Agentic Buildathon 2026 and received a certificate of participation.</p>
-            <figure class="certificate">
-              <img src="assets/omnirush-buildathon-2026.jpg" alt="Omnirush Agentic Buildathon 2026 certificate of participation for the Cure Cancer AI Dashboard">
-              <figcaption>Omnirush Agentic Buildathon 2026 : certificate of participation</figcaption>
-            </figure>
-            <p class="outcome"><span>Outcome</span>A single view of oncology signals with secure key handling and tested fallbacks.</p>
-            <ul class="tags"><li>Next.js</li><li>Server routes</li><li>PubMed</li><li>FDA</li><li>ClinicalTrials.gov</li><li>Vercel / Docker</li></ul>
-          </article>
-
-          <article class="project reveal">
-            <div class="project-top">
-              <span class="idx">04</span>
-              <a class="project-link" href="https://github.com/getzero11/sec-company-report-generator" target="_blank" rel="noopener">GitHub ↗</a>
-            </div>
-            <h3>SEC Company Report Generator</h3>
-            <p class="project-desc">Give it a ticker, company name or CIK and it produces a 10-K analysis: revenue history, ratios, segment and geographic splits, clinical and FDA context, analyst estimates and news : as Markdown or a formatted Word report.</p>
-            <p class="outcome"><span>Outcome</span>Board-ready company reports from a single command.</p>
-            <ul class="tags"><li>Python</li><li>SEC EDGAR</li><li>FMP</li><li>MCP</li><li>ClinicalTrials.gov</li><li>DOCX</li></ul>
-          </article>
-
-          <article class="project reveal">
-            <div class="project-top">
-              <span class="idx">05</span>
-              <a class="project-link" href="https://github.com/getzero11/healthcare-market-dashboard" target="_blank" rel="noopener">GitHub ↗</a>
-            </div>
-            <h3>Healthcare Market Dashboard</h3>
-            <p class="project-desc">A WordPress plugin that embeds AI-generated market dashboards inside client sites: Chart.js visualisations, 2023–2033 forecasts, and PDF, Excel and PNG export through a shortcode.</p>
-            <p class="outcome"><span>Outcome</span>Puts research dashboards on client websites without a separate app.</p>
-            <ul class="tags"><li>PHP</li><li>WordPress</li><li>n8n</li><li>DeepSeek</li><li>Chart.js</li><li>Export tools</li></ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="stack">
-      <div class="wrap">
-        <div class="section-head reveal">
-          <span class="num">03</span>
-          <h2>Stack</h2>
-        </div>
-        <div class="skills-grid five">
-          <div class="skill-col reveal">
-            <h3>Languages</h3>
-            <ul><li>TypeScript</li><li>JavaScript</li><li>Python</li><li>PHP</li><li>HTML / CSS</li></ul>
-          </div>
-          <div class="skill-col reveal">
-            <h3>Frameworks</h3>
-            <ul><li>Next.js 14</li><li>React</li><li>FastAPI</li><li>Tailwind</li><li>WordPress</li></ul>
-          </div>
-          <div class="skill-col reveal">
-            <h3>AI &amp; agents</h3>
-            <ul><li>Claude Code</li><li>MCP</li><li>n8n</li><li>Ollama / Qwen</li><li>DeepSeek</li><li>Prompt design</li></ul>
-          </div>
-          <div class="skill-col reveal">
-            <h3>Data</h3>
-            <ul><li>SEC EDGAR</li><li>FMP</li><li>ClinicalTrials.gov</li><li>PubMed</li><li>FDA</li><li>Forecasting</li></ul>
-          </div>
-          <div class="skill-col reveal">
-            <h3>Infrastructure</h3>
-            <ul><li>Docker</li><li>Vercel</li><li>Supabase / Postgres</li><li>GitHub Actions</li><li>REST APIs</li></ul>
-          </div>
-        </div>
-        <div class="foundations reveal">
-          <span class="label">Research foundations</span>
-          <p>Molecular biology · genetic engineering · biochemistry · cloning and gene expression · patent landscaping and freedom-to-operate · market sizing and forecasting · Tableau · Perl, UNIX and MySQL</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="contact" id="contact">
-      <div class="wrap contact-inner reveal">
-        <span class="num">04</span>
-        <h2>Open to collaborations that need domain depth and shipped systems.</h2>
-        <p>I work with founders, research teams and developer communities on research tooling, agent infrastructure and data products. The full career profile lives on LinkedIn.</p>
-        <div class="cta-row">
-          <a class="btn btn-light" href="#contact" data-contact>Start a conversation</a>
-          <a class="btn btn-ghost" href="https://github.com/getzero11" target="_blank" rel="noopener">GitHub</a>
-          <a class="btn btn-ghost" href="https://www.linkedin.com/in/virenkonde" target="_blank" rel="noopener">LinkedIn ↗</a>
-          <a class="btn btn-ghost" href="https://getzero11.github.io/research/" target="_blank" rel="noopener">Research index</a>
-        </div>
+        <div class="results-bar"><p class="results-label"><strong id="result-count">0</strong> matching titles</p><p class="results-tip">Select a card to read the original publication</p></div>
+        <div class="catalog" id="catalog" aria-live="polite"></div>
+        <div class="load-more"><button class="btn" id="load-more" type="button">Load more titles</button></div>
       </div>
     </section>
   </main>
 
-  <footer class="site-foot">
-    <div class="wrap foot-inner">
-      <span>© <span id="year">2026</span> Viren Konde</span>
-      <span>GitHub homepage · <a href="https://www.linkedin.com/in/virenkonde" target="_blank" rel="noopener">LinkedIn profile</a></span>
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p class="footer-copy">Research library · sourced from the iHealthcareAnalyst sitemap index</p>
+      <div class="footer-links">
+        <a href="https://www.ihealthcareanalyst.com/sitemap_index.xml" target="_blank" rel="noopener">Sitemap source ↗</a>
+        <a href="https://www.ihealthcareanalyst.com/" target="_blank" rel="noopener">iHealthcareAnalyst ↗</a>
+      </div>
     </div>
   </footer>
 
-  <div id="contact-modal" class="contact-modal" hidden>
-    <div class="contact-dialog" role="dialog" aria-modal="true" aria-labelledby="contact-title">
-      <button class="contact-close" type="button" aria-label="Close contact dialog">×</button>
-      <span class="label">Contact</span>
-      <h2 id="contact-title">Start a conversation</h2>
-      <p>Use the button below to open your email client.</p>
-      <a class="btn btn-primary contact-mail" href="#">Open email client</a>
-    </div>
-  </div>
-
   <script>
 (function () {
-  var root = document.documentElement;
-  root.classList.add('js');
-  var contactModal = document.getElementById('contact-modal');
-  var contactMail = contactModal && contactModal.querySelector('.contact-mail');
-  var contactClose = contactModal && contactModal.querySelector('.contact-close');
-  var emailParts = ['virenkonde', 'gmail.com'];
-  function openContact(event) {
-    if (event) event.preventDefault();
-    if (!contactModal || !contactMail) return;
-    contactMail.href = 'mailto:' + emailParts[0] + '@' + emailParts[1];
-    contactModal.hidden = false;
-    contactClose.focus();
-  }
-  function closeContact() {
-    if (contactModal) contactModal.hidden = true;
-  }
-  document.querySelectorAll('[data-contact]').forEach(function (link) {
-    link.addEventListener('click', openContact);
-  });
-  if (contactClose) contactClose.addEventListener('click', closeContact);
-  if (contactModal) contactModal.addEventListener('click', function (event) {
-    if (event.target === contactModal) closeContact();
-  });
-  document.addEventListener('keydown', function (event) {
-    if (event.key === 'Escape') closeContact();
-  });
+  var catalog = [];
+  var filtered = [];
+  var visible = 30;
+  var category = document.getElementById('category');
+  var type = document.getElementById('type');
+  var search = document.getElementById('search');
+  var grid = document.getElementById('catalog');
+  var count = document.getElementById('result-count');
+  var more = document.getElementById('load-more');
+  var taxonomy = document.getElementById('taxonomy-list');
+  var categories = ['Animal health', 'Biotechnology', 'Pharmaceuticals', 'Clinical diagnostics', 'Hospital equipment', 'Healthcare IT', 'Healthcare services'];
 
-  var toggle = document.getElementById('theme-toggle');
-  var stored = null;
-  try { stored = localStorage.getItem('vk-theme'); } catch (e) {}
-  var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-  var theme = stored || (prefersDark ? 'dark' : 'light');
-  root.setAttribute('data-theme', theme);
-  if (toggle) {
-    toggle.setAttribute('aria-pressed', theme === 'dark' ? 'true' : 'false');
-    toggle.addEventListener('click', function () {
-      var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-      root.setAttribute('data-theme', next);
-      toggle.setAttribute('aria-pressed', next === 'dark' ? 'true' : 'false');
-      try { localStorage.setItem('vk-theme', next); } catch (e) {}
+  function esc(value) {
+    return String(value).replace(/[&<>"']/g, function (char) { return ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[char]; });
+  }
+  function renderTaxonomy() {
+    taxonomy.innerHTML = categories.map(function (name) {
+      var total = catalog.filter(function (item) { return item.category === name; }).length;
+      return '<li><a href="#library" data-domain="' + esc(name) + '">' + esc(name) + '</a><span class="taxonomy-count">' + total + ' titles</span></li>';
+    }).join('');
+    taxonomy.querySelectorAll('[data-domain]').forEach(function (link) {
+      link.addEventListener('click', function () { category.value = link.dataset.domain; visible = 30; apply(); });
     });
   }
-  var year = document.getElementById('year');
-  if (year) year.textContent = new Date().getFullYear();
-  var items = document.querySelectorAll('.reveal');
-  if ('IntersectionObserver' in window) {
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('in');
-          io.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-    items.forEach(function (el) { io.observe(el); });
-  } else {
-    items.forEach(function (el) { el.classList.add('in'); });
+  function apply() {
+    var query = search.value.trim().toLowerCase();
+    filtered = catalog.filter(function (item) {
+      return (category.value === 'all' || item.category === category.value) &&
+        (type.value === 'all' || item.type === type.value) &&
+        (!query || (item.title + ' ' + item.category + ' ' + item.type).toLowerCase().indexOf(query) !== -1);
+    });
+    count.textContent = filtered.length.toLocaleString();
+    render();
   }
+  function render() {
+    var shown = filtered.slice(0, visible);
+    grid.innerHTML = shown.length ? shown.map(function (item) {
+      return '<a class="card" href="' + esc(item.url) + '" target="_blank" rel="noopener"><div class="card-meta"><span>' + esc(item.category) + '</span><span class="card-type">' + esc(item.type) + '</span></div><h3>' + esc(item.title) + '</h3><div class="card-foot"><span>Read on iHealthcareAnalyst</span><span class="card-arrow">↗</span></div></a>';
+    }).join('') : '<p class="empty">No titles match those filters. Try a broader search or another domain.</p>';
+    more.hidden = visible >= filtered.length;
+  }
+  function populate() {
+    categories.forEach(function (name) { category.insertAdjacentHTML('beforeend', '<option value="' + esc(name) + '">' + esc(name) + '</option>'); });
+    renderTaxonomy();
+    document.getElementById('stat-total').textContent = catalog.length.toLocaleString();
+    document.getElementById('stat-insights').textContent = catalog.filter(function (i) { return i.type === 'Insight'; }).length.toLocaleString();
+    document.getElementById('stat-reports').textContent = catalog.filter(function (i) { return i.type === 'Report'; }).length.toLocaleString();
+    apply();
+  }
+  fetch('sitemap-data/catalog.json').then(function (response) { if (!response.ok) throw new Error('catalog unavailable'); return response.json(); }).then(function (data) { catalog = data.items || []; populate(); }).catch(function () { grid.innerHTML = '<p class="empty">The research index is temporarily unavailable. Visit <a href="https://www.ihealthcareanalyst.com/" target="_blank" rel="noopener">iHealthcareAnalyst.com</a> for the current library.</p>'; more.hidden = true; });
+  [category, type].forEach(function (control) { control.addEventListener('change', function () { visible = 30; apply(); }); });
+  search.addEventListener('input', function () { visible = 30; apply(); });
+  more.addEventListener('click', function () { visible += 30; render(); });
+
+  var root = document.documentElement;
+  var toggle = document.getElementById('theme-toggle');
+  var stored = null;
+  try { stored = localStorage.getItem('research-theme'); } catch (error) {}
+  var theme = stored || 'light';
+  root.dataset.theme = theme;
+  toggle.setAttribute('aria-pressed', theme === 'dark' ? 'true' : 'false');
+  toggle.setAttribute('aria-label', theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme');
+  toggle.addEventListener('click', function () {
+    theme = root.dataset.theme === 'dark' ? 'light' : 'dark';
+    root.dataset.theme = theme;
+    toggle.setAttribute('aria-pressed', theme === 'dark' ? 'true' : 'false');
+    toggle.setAttribute('aria-label', theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme');
+    try { localStorage.setItem('research-theme', theme); } catch (error) {}
+  });
 })();
   </script>
 </body>

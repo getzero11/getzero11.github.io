@@ -1,223 +1,564 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Healthcare Market Research Reports</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary: #0ea5e9;
-            --primary-dark: #0284c7;
-            --secondary: #0f766e;
-            --bg: #f8fafc;
-            --card-bg: #ffffff;
-            --text: #1e293b;
-            --text-muted: #64748b;
-            --border: #e2e8f0;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Viren Konde: AI Engineer &amp; Builder</title>
+  <meta name="description" content="Viren Konde: AI engineer building agentic systems for research and healthcare data. Biology background, 100+ research reports, 10+ AI products, open to collaborations.">
+  <meta property="og:title" content="Viren Konde: AI Engineer &amp; Builder">
+  <meta property="og:description" content="Agentic AI systems for research, healthcare data and the web.">
+  <meta property="og:type" content="profile">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+:root {
+  --bg: #faf8f3;
+  --surface: #ffffff;
+  --ink: #15181b;
+  --muted: #5f656c;
+  --line: #e3ded3;
+  --accent: #0b6b5b;
+  --accent-soft: #e7f1ee;
+  --gold: #b07c1e;
+  --gold-soft: rgba(176, 124, 30, 0.1);
+  --shadow: 0 18px 40px rgba(21, 24, 27, 0.07);
+  --serif: 'Instrument Serif', Georgia, 'Times New Roman', serif;
+  --sans: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --mono: 'JetBrains Mono', ui-monospace, 'SFMono-Regular', Consolas, monospace;
+}
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+[data-theme="dark"] {
+  --bg: #101413;
+  --surface: #161b1a;
+  --ink: #edeae2;
+  --muted: #a0a7a4;
+  --line: #2a302e;
+  --accent: #63c6b0;
+  --accent-soft: #16332d;
+  --gold: #d9a441;
+  --gold-soft: rgba(217, 164, 65, 0.12);
+  --shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+}
 
-        body {
-            font-family: 'Inter', sans-serif;
-            background: var(--bg);
-            color: var(--text);
-            line-height: 1.6;
-        }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--sans); font-size: 16px; line-height: 1.65;
+  color: var(--ink); background: var(--bg);
+  -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
+}
+::selection { background: var(--accent); color: var(--bg); }
+a { color: inherit; }
+.wrap { max-width: 1120px; margin: 0 auto; padding: 0 28px; }
+.skip {
+  position: absolute; left: 16px; top: -60px;
+  background: var(--ink); color: var(--bg); padding: 10px 14px; z-index: 100;
+  font-family: var(--mono); font-size: 12px; text-decoration: none;
+}
+.skip:focus { top: 16px; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 0 1.5rem;
-        }
+.site-head {
+  position: sticky; top: 0; z-index: 50;
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: blur(14px); border-bottom: 1px solid var(--line);
+}
+.head-inner { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+.brand { font-family: var(--serif); font-size: 1.55rem; line-height: 1; text-decoration: none; }
+.brand span { color: var(--accent); }
+.site-nav { display: flex; gap: 26px; }
+.site-nav a {
+  font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.13em;
+  text-transform: uppercase; text-decoration: none; color: var(--muted);
+  padding: 4px 0; border-bottom: 1px solid transparent;
+  transition: color 0.18s ease, border-color 0.18s ease;
+}
+.site-nav a:hover { color: var(--ink); border-bottom-color: var(--accent); }
+.theme-toggle {
+  width: 34px; height: 34px; border-radius: 50%;
+  border: 1px solid var(--line); background: transparent; color: var(--ink);
+  font-size: 14px; cursor: pointer; line-height: 1;
+  transition: border-color 0.18s ease, transform 0.3s ease;
+}
+.theme-toggle:hover { border-color: var(--accent); transform: rotate(90deg); }
 
-        header {
-            background: var(--card-bg);
-            border-bottom: 1px solid var(--border);
-            padding: 1.5rem 0;
-        }
+.hero { padding: 92px 0 76px; }
+.hero-grid { display: grid; grid-template-columns: 1.4fr 0.85fr; gap: 64px; align-items: end; }
+.eyebrow {
+  font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--accent);
+  display: flex; align-items: center; gap: 12px; margin-bottom: 22px;
+}
+.eyebrow::before { content: ""; width: 30px; height: 1px; background: var(--accent); }
+h1 {
+  font-family: var(--serif); font-weight: 400;
+  font-size: clamp(2.8rem, 6vw, 4.4rem);
+  line-height: 0.94; letter-spacing: -0.025em; margin-bottom: 24px;
+}
+.lede { font-size: clamp(1.25rem, 2vw, 1.5rem); line-height: 1.4; max-width: 30ch; margin-bottom: 18px; }
+.lede em { font-family: var(--serif); font-style: italic; color: var(--accent); font-size: 1.08em; }
+.sub { color: var(--muted); max-width: 54ch; margin-bottom: 32px; }
+.cta-row { display: flex; flex-wrap: wrap; gap: 10px; }
+.btn {
+  font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.11em;
+  text-transform: uppercase; text-decoration: none;
+  padding: 14px 20px; border: 1px solid var(--ink); color: var(--ink);
+  background: transparent; transition: all 0.18s ease; display: inline-block;
+}
+.btn:hover { background: var(--accent); border-color: var(--accent); color: var(--bg); }
+.btn-primary { background: var(--ink); color: var(--bg); }
+.btn-primary:hover { background: var(--accent); border-color: var(--accent); color: var(--bg); }
+.meta-row {
+  list-style: none; display: flex; flex-wrap: wrap; gap: 22px; margin-top: 30px;
+  font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.08em;
+  text-transform: uppercase; color: var(--muted);
+}
+.meta-row li { display: flex; align-items: center; gap: 8px; }
+.meta-row li::before { content: ""; width: 5px; height: 5px; border-radius: 50%; background: var(--accent); }
 
-        .header-content {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
+/* Terminal card */
+.terminal {
+  background: #0f1514; color: #d7e3df; border: 1px solid #22302d;
+  border-radius: 6px; padding: 22px; font-family: var(--mono);
+  font-size: 12.5px; line-height: 1.7; box-shadow: var(--shadow);
+}
+.terminal-bar { display: flex; gap: 6px; margin-bottom: 18px; }
+.terminal-bar span { width: 9px; height: 9px; border-radius: 50%; background: #33413d; }
+.terminal-bar span:nth-child(1) { background: #d97c5f; }
+.terminal-bar span:nth-child(2) { background: #d9b25f; }
+.terminal-bar span:nth-child(3) { background: #63c6b0; }
+.terminal p { margin: 0 0 8px; }
+.terminal .prompt { color: #63c6b0; }
+.terminal .cmd { color: #ffffff; }
+.terminal .out { color: #9fb3ad; }
+.terminal .key { color: #d9b25f; }
+.terminal .gap { margin-bottom: 16px; }
 
-        .logo {
-            font-size: 1.25rem;
-            font-weight: 700;
-            color: var(--primary);
-            text-decoration: none;
-        }
+.proof { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: var(--surface); padding: 36px 0; }
+.proof-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; }
+.proof-grid strong { display: block; font-family: var(--serif); font-weight: 400; font-size: 2.4rem; line-height: 1; margin-bottom: 8px; }
+.proof-grid span { font-family: var(--mono); font-size: 9.5px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); line-height: 1.6; display: block; max-width: 17ch; }
+.coverage { margin-top: 26px; padding-top: 18px; border-top: 1px solid var(--line); }
+.coverage .label { display: block; margin-bottom: 6px; font-family: var(--mono); font-size: 9.5px; letter-spacing: 0.13em; text-transform: uppercase; color: var(--accent); }
+.coverage p { color: var(--muted); font-family: var(--mono); font-size: 10px; letter-spacing: 0.04em; text-transform: uppercase; line-height: 1.8; }
 
-        .hero {
-            padding: 4rem 0;
-            text-align: center;
-        }
+.section { padding: 88px 0; border-top: 1px solid var(--line); }
+.section-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 22px; margin-bottom: 48px; }
+.section-head .num { font-family: var(--mono); font-size: 11px; letter-spacing: 0.12em; color: var(--accent); padding-top: 8px; }
+.section-head h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(1.7rem, 3vw, 2.35rem); line-height: 1.05; letter-spacing: -0.015em; }
+.section-note { color: var(--muted); font-size: 0.92rem; flex-basis: 100%; max-width: 62ch; }
 
-        .hero h1 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
+.about-grid { display: grid; grid-template-columns: 1.05fr 1fr; gap: 56px; }
+.about-lead { font-family: var(--serif); font-size: clamp(1.6rem, 2.6vw, 2.05rem); line-height: 1.25; letter-spacing: -0.01em; }
+.about-body p { color: var(--muted); margin-bottom: 18px; }
+.about-body p:last-child { margin-bottom: 0; }
+.history { max-width: 80ch; }
+.history p { color: var(--muted); margin-bottom: 18px; }
+.history p:last-child { margin-bottom: 0; }
+.history p:first-child { color: var(--ink); }
 
-        .hero p {
-            font-size: 1.125rem;
-            color: var(--text-muted);
-            max-width: 600px;
-            margin: 0 auto 2rem;
-        }
+.project {
+  background: var(--surface); border: 1px solid var(--line);
+  border-radius: 4px; padding: 30px;
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+}
+.project:hover { transform: translateY(-3px); box-shadow: var(--shadow); border-color: var(--accent); }
+.project-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+.idx { font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.1em; color: var(--muted); }
+.project-link { font-family: var(--mono); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid transparent; padding-bottom: 2px; }
+.project-link:hover { border-bottom-color: var(--accent); }
+.project-links { display: flex; gap: 12px; }
+.project h3 { font-family: var(--serif); font-weight: 400; font-size: 1.65rem; line-height: 1.15; margin-bottom: 12px; letter-spacing: -0.01em; }
+.project-desc { color: var(--muted); font-size: 0.92rem; margin-bottom: 18px; }
+.outcome { display: flex; flex-wrap: wrap; gap: 6px 10px; align-items: baseline; padding: 12px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); font-size: 0.88rem; margin-bottom: 18px; }
+.outcome span { font-family: var(--mono); font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); flex: none; }
+.tags { list-style: none; display: flex; flex-wrap: wrap; gap: 6px; }
+.tags li { font-family: var(--mono); font-size: 9.5px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); border: 1px solid var(--line); padding: 4px 8px; }
+.project-featured { margin-bottom: 20px; padding: 38px; }
+.project-featured h3 { font-size: 2rem; }
+.project-featured .project-desc { max-width: 78ch; }
+.project-featured .outcome { max-width: 78ch; }
+.project-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
 
-        .badge {
-            display: inline-block;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-            color: white;
-            padding: 0.25rem 0.75rem;
-            border-radius: 9999px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
+.skills-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 36px; }
+.skills-grid.five { grid-template-columns: repeat(5, 1fr); gap: 26px; }
+.skill-col h3 { font-family: var(--mono); font-size: 10px; letter-spacing: 0.13em; text-transform: uppercase; color: var(--accent); padding-bottom: 12px; border-bottom: 1px solid var(--ink); margin-bottom: 4px; }
+.skill-col ul { list-style: none; }
+.skill-col li { padding: 9px 0; border-bottom: 1px solid var(--line); font-size: 0.86rem; }
+.foundations { margin-top: 36px; padding-top: 22px; border-top: 1px solid var(--line); }
+.foundations .label { display: block; font-family: var(--mono); font-size: 10px; letter-spacing: 0.13em; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; }
+.foundations p { color: var(--muted); font-size: 0.88rem; max-width: 92ch; }
 
-        .links-section {
-            padding: 2rem 0 4rem;
-        }
+.timeline { border-top: 1px solid var(--line); }
+.tl-item { display: grid; grid-template-columns: 200px 1fr; gap: 32px; padding: 26px 0; border-bottom: 1px solid var(--line); }
+.tl-when { font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); padding-top: 6px; }
+.tl-body h3, .edu-item h3 { font-family: var(--serif); font-weight: 400; font-size: 1.4rem; line-height: 1.2; margin-bottom: 4px; }
+.tl-org { font-family: var(--mono); font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; }
+.tl-desc { color: var(--muted); font-size: 0.9rem; max-width: 66ch; }
+.edu { margin-top: 44px; border-top: 1px solid var(--line); }
+.edu-item { display: grid; grid-template-columns: 200px 1fr; gap: 32px; padding: 22px 0; border-bottom: 1px solid var(--line); }
 
-        .links-section h2 {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 1.5rem;
-            text-align: center;
-        }
+.log { border-top: 1px solid var(--line); }
+.log-item { display: grid; grid-template-columns: 160px 1fr; gap: 32px; padding: 20px 0; border-bottom: 1px solid var(--line); align-items: baseline; }
+.log-date { font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); }
+.log-item h3 { font-family: var(--serif); font-weight: 400; font-size: 1.3rem; line-height: 1.2; margin-bottom: 2px; }
+.log-item p { color: var(--muted); font-size: 0.88rem; }
+.hackathon { display: grid; grid-template-columns: 360px 1fr; gap: 28px; align-items: center; margin-top: 34px; }
+.hackathon img { width: 100%; height: auto; display: block; border: 1px solid var(--line); border-radius: 4px; }
+.hackathon h3 { font-family: var(--serif); font-weight: 400; font-size: 1.5rem; line-height: 1.2; margin: 6px 0 8px; }
+.hackathon p { color: var(--muted); font-size: 0.9rem; max-width: 52ch; }
+.hackathon .label { font-family: var(--mono); font-size: 10px; letter-spacing: 0.13em; text-transform: uppercase; color: var(--accent); }
+.certificate { margin: 18px 0 0; padding-top: 16px; border-top: 1px solid var(--line); }
+.certificate img { display: block; width: min(100%, 260px); height: auto; border: 1px solid var(--line); border-radius: 3px; }
+.certificate figcaption { margin-top: 8px; color: var(--muted); font-family: var(--mono); font-size: 9px; letter-spacing: 0.04em; text-transform: uppercase; line-height: 1.5; }
 
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-        }
+.todo { color: var(--gold); background: var(--gold-soft); border-bottom: 1px dashed var(--gold); padding: 0 3px; font-family: var(--mono); font-size: 0.82em; letter-spacing: 0.02em; white-space: nowrap; }
 
-        .card {
-            background: var(--card-bg);
-            border: 1px solid var(--border);
-            border-radius: 0.75rem;
-            padding: 1.5rem;
-            transition: all 0.2s ease;
-            text-decoration: none;
-            color: inherit;
-        }
+.contact { background: var(--ink); color: var(--bg); padding: 92px 0; }
+.contact .num { font-family: var(--mono); font-size: 11px; letter-spacing: 0.12em; color: var(--accent); display: block; margin-bottom: 20px; }
+.contact h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(1.7rem, 3vw, 2.35rem); line-height: 1.1; letter-spacing: -0.015em; max-width: 34ch; margin-bottom: 20px; }
+.contact p { color: color-mix(in srgb, var(--bg) 70%, transparent); max-width: 58ch; margin-bottom: 32px; }
+.contact-modal[hidden] { display: none; }
+.contact-modal { position: fixed; inset: 0; z-index: 100; display: grid; place-items: center; padding: 24px; background: rgba(15, 21, 20, 0.72); }
+.contact-dialog { position: relative; width: min(100%, 440px); padding: 34px; background: var(--surface); color: var(--ink); border: 1px solid var(--line); border-radius: 6px; box-shadow: var(--shadow); }
+.contact-dialog h2 { font-family: var(--serif); font-weight: 400; font-size: 2.15rem; line-height: 1.1; margin: 8px 0 10px; }
+.contact-dialog p { color: var(--muted); margin-bottom: 24px; }
+.contact-close { position: absolute; top: 14px; right: 16px; border: 0; background: transparent; color: var(--muted); font-size: 26px; line-height: 1; cursor: pointer; }
+.contact-close:hover { color: var(--ink); }
+.contact-mail { text-align: center; }
+.btn-light { background: var(--bg); border-color: var(--bg); color: var(--ink); }
+.btn-light:hover { background: var(--accent); border-color: var(--accent); color: var(--bg); }
+.btn-ghost { border-color: color-mix(in srgb, var(--bg) 40%, transparent); color: var(--bg); }
+.btn-ghost:hover { background: var(--bg); border-color: var(--bg); color: var(--ink); }
 
-        .card:hover {
-            border-color: var(--primary);
-            box-shadow: 0 4px 12px rgba(14, 165, 233, 0.15);
-            transform: translateY(-2px);
-        }
+.site-foot { border-top: 1px solid var(--line); padding: 24px 0; }
+.foot-inner { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; font-family: var(--mono); font-size: 9.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+.foot-inner a { color: var(--accent); text-decoration: none; }
+.foot-inner a:hover { text-decoration: underline; }
 
-        .card h3 {
-            font-size: 1.125rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-            color: var(--primary);
-        }
-
-        .card p {
-            font-size: 0.875rem;
-            color: var(--text-muted);
-        }
-
-        .card-icon {
-            font-size: 1.5rem;
-            margin-bottom: 0.75rem;
-        }
-
-        footer {
-            background: var(--card-bg);
-            border-top: 1px solid var(--border);
-            padding: 2rem 0;
-            text-align: center;
-            color: var(--text-muted);
-            font-size: 0.875rem;
-        }
-
-        footer a {
-            color: var(--primary);
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
-
-        @media (max-width: 640px) {
-            .hero h1 {
-                font-size: 1.75rem;
-            }
-            .hero p {
-                font-size: 1rem;
-            }
-        }
-    </style>
+.reveal { opacity: 1; transform: none; }
+.js .reveal { opacity: 0; transform: translateY(14px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.js .reveal.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .js .reveal { opacity: 1; transform: none; transition: none; }
+  .project, .theme-toggle { transition: none; }
+}
+@media (max-width: 960px) {
+  .hero-grid { grid-template-columns: 1fr; gap: 44px; }
+  .terminal { max-width: 560px; }
+  .about-grid { grid-template-columns: 1fr; gap: 28px; }
+  .skills-grid, .skills-grid.five { grid-template-columns: 1fr 1fr; gap: 32px; }
+  .proof-grid { grid-template-columns: 1fr 1fr; gap: 24px; }
+  .section-head { margin-bottom: 36px; }
+}
+@media (max-width: 720px) {
+  .site-nav { display: none; }
+  .hero { padding: 64px 0 56px; }
+  .section { padding: 64px 0; }
+  .project-grid { grid-template-columns: 1fr; }
+  .tl-item, .edu-item, .log-item { grid-template-columns: 1fr; gap: 8px; }
+  .hackathon { grid-template-columns: 1fr; }
+  .project-featured { padding: 26px; }
+  .project { padding: 26px; }
+  .contact { padding: 64px 0; }
+  .proof-grid strong { font-size: 2rem; }
+}
+@media (max-width: 460px) {
+  .skills-grid, .skills-grid.five { grid-template-columns: 1fr; }
+  .meta-row { flex-direction: column; gap: 10px; }
+  .btn { width: 100%; text-align: center; }
+}
+  </style>
 </head>
 <body>
-    <header>
-        <div class="container header-content">
-            <a href="#" class="logo">Healthcare Market Research</a>
-            <span class="badge">Research Repository</span>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-head">
+    <div class="wrap head-inner">
+      <a class="brand" href="#top" aria-label="Viren Konde, home">VK<span>.</span></a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#work">Work</a>
+        <a href="#stack">Stack</a>
+        <a href="#contact">Collaborate</a>
+      </nav>
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle colour theme" aria-pressed="false">◐</button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="wrap hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">AI engineering · Agents · Research automation</p>
+          <h1>Viren Konde</h1>
+          <p class="lede">I build <em>agentic AI</em> systems for research, healthcare data and the web.</p>
+          <p class="sub">Biology background, years of healthcare market research, and 10+ shipped AI products. I care about systems that produce defensible answers, not just demos.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="https://github.com/getzero11" target="_blank" rel="noopener">See the code</a>
+            <a class="btn" href="#contact" data-contact>Email me</a>
+            <a class="btn" href="https://www.linkedin.com/in/virenkonde" target="_blank" rel="noopener">LinkedIn ↗</a>
+          </div>
+          <ul class="meta-row">
+            <li>Pune, India</li>
+            <li>Open to collaborations</li>
+          </ul>
         </div>
-    </header>
 
-    <main>
-        <section class="hero">
-            <div class="container">
-                <h1>Healthcare Market Research Reports</h1>
-                <p>A comprehensive collection of healthcare industry resources, market research, and analysis from iHealthcareAnalyst. Explore the latest insights in medical devices, pharmaceuticals, digital health, and more.</p>
-            </div>
-        </section>
+        <aside class="terminal reveal" aria-label="Current focus">
+          <div class="terminal-bar" aria-hidden="true"><span></span><span></span><span></span></div>
+          <p><span class="prompt">$</span> <span class="cmd">whoami</span></p>
+          <p class="out">AI systems builder, biology : market research : software</p>
+          <p class="gap"></p>
+          <p><span class="prompt">$</span> <span class="cmd">currently</span></p>
+          <p class="out">agent platforms on n8n, FastAPI and MCP</p>
+          <p class="out">research agents and data dashboards</p>
+          <p class="out">local models with Ollama and Qwen</p>
+          <p class="gap"></p>
+          <p><span class="prompt">$</span> <span class="cmd">stack</span></p>
+          <p class="out">typescript · python · next.js · n8n · mcp</p>
+        </aside>
+      </div>
+    </section>
 
-        <section class="links-section">
-            <div class="container">
-                <h2>Explore Resources</h2>
-                <div class="cards">
-                    <a href="README.md" class="card">
-                        <div class="card-icon">📖</div>
-                        <h3>README</h3>
-                        <p>Overview and documentation of the healthcare research repository</p>
-                    </a>
-                    <a href="Post_Links.txt" class="card">
-                        <div class="card-icon">📰</div>
-                        <h3>Publication Links</h3>
-                        <p>Collection of healthcare articles, research publications, and industry posts</p>
-                    </a>
-                    <a href="Product_links.txt" class="card">
-                        <div class="card-icon">💊</div>
-                        <h3>Product Links</h3>
-                        <p>Healthcare product analysis, information links, and market data</p>
-                    </a>
-                    <a href="https://www.ihealthcareanalyst.com" target="_blank" rel="noopener" class="card">
-                        <div class="card-icon">🌐</div>
-                        <h3>Source Website</h3>
-                        <p>Visit iHealthcareAnalyst.com for the original research and analysis</p>
-                    </a>
-                </div>
-            </div>
-        </section>
-    </main>
+    <section class="proof" aria-label="At a glance">
+      <div class="wrap proof-grid">
+        <div class="reveal"><strong>10+</strong><span>years in healthcare research</span></div>
+        <div class="reveal"><strong>100+</strong><span>published research reports</span></div>
+        <div class="reveal"><strong>10+</strong><span>AI products &amp; tools built</span></div>
+        <div class="reveal"><strong>10+</strong><span>domains &amp; subdomains covered</span></div>
+      </div>
+      <div class="wrap coverage reveal">
+        <span class="label">Domains &amp; subdomains</span>
+        <p>Healthcare · market research · consulting · animal health · biotechnology · clinical diagnostics · healthcare IT · healthcare services · medical devices · hospital equipment · pharmaceuticals</p>
+      </div>
+    </section>
 
-    <footer>
-        <div class="container">
-            <p>Healthcare Market Research Reports • <a href="https://github.com/getzero11/ihealthcareanalyst.github.io">View on GitHub</a></p>
+    <section class="section" id="about">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="num">01</span>
+          <h2>About</h2>
         </div>
-    </footer>
+        <div class="about-grid">
+          <p class="about-lead reveal">Biotechnology taught me to ask better questions. Research taught me to defend the answers. Software lets me repeat them.</p>
+          <div class="about-body reveal">
+  <p>My path ran from biotechnology and molecular biology research, to postdoctoral molecular bacteriology and neuroscience through healthcare market research, and into building AI agentic systems. I have published 100+ research reports across medical devices, pharmaceuticals, diagnostics and digital health.</p>
+            <p>Before building AI products, I worked across scientific research, biotechnology R&amp;D, technology commercialisation, teaching and healthcare consulting. That mix gives me a practical view of how research becomes a product: from evidence and validation to market context, delivery and collaboration.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="work">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="num">02</span>
+          <h2>Selected work</h2>
+          <p class="section-note">Five repositories: one arc from research reports to the systems that generate them.</p>
+        </div>
+
+        <article class="project project-featured reveal">
+          <div class="project-top">
+            <span class="idx">01</span>
+            <a class="project-link" href="https://github.com/getzero11/ai-automation-stack" target="_blank" rel="noopener">GitHub ↗</a>
+          </div>
+          <h3>AI Automation Stack</h3>
+          <p class="project-desc">A self-contained agent platform that runs anywhere: n8n for orchestration, Claude Code with an MCP control layer, a FastAPI agent API, local Qwen models through Ollama, and Supabase for durable state. Packaged for Docker and Hugging Face Spaces.</p>
+          <p class="outcome"><span>Outcome</span>One stack for building and running agent workflows without stitching five vendors together.</p>
+          <ul class="tags">
+            <li>n8n</li><li>Claude Code</li><li>MCP</li><li>FastAPI</li><li>Ollama / Qwen</li><li>Supabase</li><li>Docker</li>
+          </ul>
+        </article>
+
+        <div class="project-grid">
+          <article class="project reveal">
+            <div class="project-top">
+              <span class="idx">02</span>
+              <span class="project-links">
+                <a class="project-link" href="https://healthcare-research-agent.vercel.app/" target="_blank" rel="noopener">Live ↗</a>
+                <a class="project-link" href="https://github.com/getzero11/healthcare-research-agent" target="_blank" rel="noopener">GitHub ↗</a>
+              </span>
+            </div>
+            <h3>Healthcare Research Agent</h3>
+            <p class="project-desc">Brief in, report out: market sizing, competitive analysis and forecasts, with generated infographics, PDF assembly, email delivery and Google Drive storage. Next.js 14 front end, n8n and DeepSeek behind it.</p>
+            <p class="outcome"><span>Outcome</span>Automates the full desk-research-to-deliverable pipeline.</p>
+            <ul class="tags"><li>Next.js 14</li><li>TypeScript</li><li>Tailwind</li><li>n8n</li><li>DeepSeek</li><li>Puppeteer</li><li>Vercel</li></ul>
+          </article>
+
+          <article class="project reveal">
+            <div class="project-top">
+              <span class="idx">03</span>
+              <span class="project-links">
+                <a class="project-link" href="https://cure-cancer-ai-dashboard.vercel.app/" target="_blank" rel="noopener">Live ↗</a>
+                <a class="project-link" href="https://github.com/getzero11/cure-cancer-ai-dashboard" target="_blank" rel="noopener">GitHub ↗</a>
+              </span>
+            </div>
+            <h3>Cure Cancer AI Dashboard</h3>
+            <p class="project-desc">Oncology signals across PubMed, FDA and ClinicalTrials.gov, with cancer-type and cross-source filters. The Cure Cancer AI Dashboard was submitted for the Omnirush Agentic Buildathon 2026 and received a certificate of participation.</p>
+            <figure class="certificate">
+              <img src="assets/omnirush-buildathon-2026.jpg" alt="Omnirush Agentic Buildathon 2026 certificate of participation for the Cure Cancer AI Dashboard">
+              <figcaption>Omnirush Agentic Buildathon 2026 : certificate of participation</figcaption>
+            </figure>
+            <p class="outcome"><span>Outcome</span>A single view of oncology signals with secure key handling and tested fallbacks.</p>
+            <ul class="tags"><li>Next.js</li><li>Server routes</li><li>PubMed</li><li>FDA</li><li>ClinicalTrials.gov</li><li>Vercel / Docker</li></ul>
+          </article>
+
+          <article class="project reveal">
+            <div class="project-top">
+              <span class="idx">04</span>
+              <a class="project-link" href="https://github.com/getzero11/sec-company-report-generator" target="_blank" rel="noopener">GitHub ↗</a>
+            </div>
+            <h3>SEC Company Report Generator</h3>
+            <p class="project-desc">Give it a ticker, company name or CIK and it produces a 10-K analysis: revenue history, ratios, segment and geographic splits, clinical and FDA context, analyst estimates and news : as Markdown or a formatted Word report.</p>
+            <p class="outcome"><span>Outcome</span>Board-ready company reports from a single command.</p>
+            <ul class="tags"><li>Python</li><li>SEC EDGAR</li><li>FMP</li><li>MCP</li><li>ClinicalTrials.gov</li><li>DOCX</li></ul>
+          </article>
+
+          <article class="project reveal">
+            <div class="project-top">
+              <span class="idx">05</span>
+              <a class="project-link" href="https://github.com/getzero11/healthcare-market-dashboard" target="_blank" rel="noopener">GitHub ↗</a>
+            </div>
+            <h3>Healthcare Market Dashboard</h3>
+            <p class="project-desc">A WordPress plugin that embeds AI-generated market dashboards inside client sites: Chart.js visualisations, 2023–2033 forecasts, and PDF, Excel and PNG export through a shortcode.</p>
+            <p class="outcome"><span>Outcome</span>Puts research dashboards on client websites without a separate app.</p>
+            <ul class="tags"><li>PHP</li><li>WordPress</li><li>n8n</li><li>DeepSeek</li><li>Chart.js</li><li>Export tools</li></ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="stack">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="num">03</span>
+          <h2>Stack</h2>
+        </div>
+        <div class="skills-grid five">
+          <div class="skill-col reveal">
+            <h3>Languages</h3>
+            <ul><li>TypeScript</li><li>JavaScript</li><li>Python</li><li>PHP</li><li>HTML / CSS</li></ul>
+          </div>
+          <div class="skill-col reveal">
+            <h3>Frameworks</h3>
+            <ul><li>Next.js 14</li><li>React</li><li>FastAPI</li><li>Tailwind</li><li>WordPress</li></ul>
+          </div>
+          <div class="skill-col reveal">
+            <h3>AI &amp; agents</h3>
+            <ul><li>Claude Code</li><li>MCP</li><li>n8n</li><li>Ollama / Qwen</li><li>DeepSeek</li><li>Prompt design</li></ul>
+          </div>
+          <div class="skill-col reveal">
+            <h3>Data</h3>
+            <ul><li>SEC EDGAR</li><li>FMP</li><li>ClinicalTrials.gov</li><li>PubMed</li><li>FDA</li><li>Forecasting</li></ul>
+          </div>
+          <div class="skill-col reveal">
+            <h3>Infrastructure</h3>
+            <ul><li>Docker</li><li>Vercel</li><li>Supabase / Postgres</li><li>GitHub Actions</li><li>REST APIs</li></ul>
+          </div>
+        </div>
+        <div class="foundations reveal">
+          <span class="label">Research foundations</span>
+          <p>Molecular biology · genetic engineering · biochemistry · cloning and gene expression · patent landscaping and freedom-to-operate · market sizing and forecasting · Tableau · Perl, UNIX and MySQL</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="wrap contact-inner reveal">
+        <span class="num">04</span>
+        <h2>Open to collaborations that need domain depth and shipped systems.</h2>
+        <p>I work with founders, research teams and developer communities on research tooling, agent infrastructure and data products. The full career profile lives on LinkedIn.</p>
+        <div class="cta-row">
+          <a class="btn btn-light" href="#contact" data-contact>Start a conversation</a>
+          <a class="btn btn-ghost" href="https://github.com/getzero11" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn btn-ghost" href="https://www.linkedin.com/in/virenkonde" target="_blank" rel="noopener">LinkedIn ↗</a>
+          <a class="btn btn-ghost" href="https://getzero11.github.io/research/" target="_blank" rel="noopener">Research index</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-foot">
+    <div class="wrap foot-inner">
+      <span>© <span id="year">2026</span> Viren Konde</span>
+      <span>GitHub homepage · <a href="https://www.linkedin.com/in/virenkonde" target="_blank" rel="noopener">LinkedIn profile</a></span>
+    </div>
+  </footer>
+
+  <div id="contact-modal" class="contact-modal" hidden>
+    <div class="contact-dialog" role="dialog" aria-modal="true" aria-labelledby="contact-title">
+      <button class="contact-close" type="button" aria-label="Close contact dialog">×</button>
+      <span class="label">Contact</span>
+      <h2 id="contact-title">Start a conversation</h2>
+      <p>Use the button below to open your email client.</p>
+      <a class="btn btn-primary contact-mail" href="#">Open email client</a>
+    </div>
+  </div>
+
+  <script>
+(function () {
+  var root = document.documentElement;
+  root.classList.add('js');
+  var contactModal = document.getElementById('contact-modal');
+  var contactMail = contactModal && contactModal.querySelector('.contact-mail');
+  var contactClose = contactModal && contactModal.querySelector('.contact-close');
+  var emailParts = ['virenkonde', 'gmail.com'];
+  function openContact(event) {
+    if (event) event.preventDefault();
+    if (!contactModal || !contactMail) return;
+    contactMail.href = 'mailto:' + emailParts[0] + '@' + emailParts[1];
+    contactModal.hidden = false;
+    contactClose.focus();
+  }
+  function closeContact() {
+    if (contactModal) contactModal.hidden = true;
+  }
+  document.querySelectorAll('[data-contact]').forEach(function (link) {
+    link.addEventListener('click', openContact);
+  });
+  if (contactClose) contactClose.addEventListener('click', closeContact);
+  if (contactModal) contactModal.addEventListener('click', function (event) {
+    if (event.target === contactModal) closeContact();
+  });
+  document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') closeContact();
+  });
+
+  var toggle = document.getElementById('theme-toggle');
+  var stored = null;
+  try { stored = localStorage.getItem('vk-theme'); } catch (e) {}
+  var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  var theme = stored || (prefersDark ? 'dark' : 'light');
+  root.setAttribute('data-theme', theme);
+  if (toggle) {
+    toggle.setAttribute('aria-pressed', theme === 'dark' ? 'true' : 'false');
+    toggle.addEventListener('click', function () {
+      var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      toggle.setAttribute('aria-pressed', next === 'dark' ? 'true' : 'false');
+      try { localStorage.setItem('vk-theme', next); } catch (e) {}
+    });
+  }
+  var year = document.getElementById('year');
+  if (year) year.textContent = new Date().getFullYear();
+  var items = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    items.forEach(function (el) { io.observe(el); });
+  } else {
+    items.forEach(function (el) { el.classList.add('in'); });
+  }
+})();
+  </script>
 </body>
 </html>

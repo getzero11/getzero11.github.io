@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>iHealthcareAnalyst Research Library | Market Intelligence &amp; Consulting</title>
+  <meta name="description" content="Healthcare market research reports, analyst insights and press releases across animal health, biotechnology, pharmaceuticals, diagnostics, hospital equipment, healthcare IT and services.">
+  <meta property="og:title" content="iHealthcareAnalyst Research Library">
+  <meta property="og:description" content="A structured library of healthcare market intelligence, analyst insights and published reports.">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://getzero11.github.io/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet">
+  <style>
+:root {
+  --paper: #f5f3ed;
+  --panel: #fffefa;
+  --ink: #18231f;
+  --muted: #69736c;
+  --rule: #d9ddd5;
+  --accent: #146b5d;
+  --accent-deep: #0e4d44;
+  --accent-wash: #dcece5;
+  --signal: #c98236;
+  --shadow: 0 20px 50px rgba(24, 35, 31, .08);
+  --display: 'Newsreader', Georgia, serif;
+  --body: 'DM Sans', system-ui, sans-serif;
+  --mono: 'DM Mono', ui-monospace, monospace;
+}
+[data-theme="dark"] {
+  --paper: #111816;
+  --panel: #18211e;
+  --ink: #eef1eb;
+  --muted: #a2aea7;
+  --rule: #2b3833;
+  --accent: #70c6ae;
+  --accent-deep: #98e0c8;
+  --accent-wash: #193d34;
+  --signal: #e1a05d;
+  --shadow: 0 20px 50px rgba(0, 0, 0, .3);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--paper); color: var(--ink); font-family: var(--body);
+  line-height: 1.6; -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; }
+button, input, select { font: inherit; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.wrap { width: min(1180px, calc(100% - 48px)); margin: 0 auto; }
+.skip { position: absolute; top: -60px; left: 16px; z-index: 100; padding: 10px 14px; background: var(--ink); color: var(--paper); text-decoration: none; font-family: var(--mono); font-size: 12px; }
+.skip:focus { top: 16px; }
+
+/* The top bar is deliberately spare: it feels like a library catalogue, not a product landing page. */
+.site-header { position: sticky; top: 0; z-index: 20; background: color-mix(in srgb, var(--paper) 91%, transparent); backdrop-filter: blur(16px); border-bottom: 1px solid var(--rule); }
+.header-inner { display: flex; min-height: 70px; align-items: center; justify-content: space-between; gap: 24px; }
+.wordmark { display: inline-flex; align-items: center; gap: 11px; text-decoration: none; }
+.wordmark-mark { width: 29px; height: 29px; display: grid; place-items: center; background: var(--accent); color: var(--paper); font-family: var(--display); font-size: 18px; border-radius: 50%; }
+.wordmark-text { font-family: var(--mono); font-size: 11px; font-weight: 500; letter-spacing: .09em; text-transform: uppercase; }
+.nav { display: flex; align-items: center; gap: 28px; }
+.nav a { font-family: var(--mono); font-size: 10px; letter-spacing: .11em; text-transform: uppercase; color: var(--muted); text-decoration: none; }
+.nav a:hover { color: var(--accent); }
+.theme-toggle { width: 35px; height: 35px; border: 1px solid var(--rule); border-radius: 50%; background: transparent; color: var(--ink); cursor: pointer; font-size: 15px; transition: transform .2s, border-color .2s; }
+.theme-toggle:hover { transform: rotate(18deg); border-color: var(--accent); }
+
+/* Hero: the large live count and taxonomy are the signature, making the corpus itself the hero. */
+.hero { padding: 92px 0 76px; border-bottom: 1px solid var(--rule); }
+.hero-grid { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(340px, .95fr); gap: 82px; align-items: end; }
+.kicker { display: flex; align-items: center; gap: 12px; color: var(--accent); font-family: var(--mono); font-size: 10px; letter-spacing: .15em; text-transform: uppercase; margin-bottom: 23px; }
+.kicker::before { width: 32px; height: 1px; background: var(--accent); content: ''; }
+h1 { max-width: 660px; font-family: var(--display); font-size: clamp(3.1rem, 7vw, 6.35rem); font-weight: 400; line-height: .92; letter-spacing: -.045em; }
+.hero-lede { max-width: 570px; margin-top: 26px; color: var(--muted); font-size: 1.08rem; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 30px; }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 43px; padding: 0 17px; border: 1px solid var(--ink); color: var(--ink); font-family: var(--mono); font-size: 10px; letter-spacing: .09em; text-transform: uppercase; text-decoration: none; transition: background .2s, color .2s, border-color .2s; }
+.btn:hover { border-color: var(--accent); background: var(--accent); color: var(--paper); }
+.btn-primary { border-color: var(--accent); background: var(--accent); color: var(--paper); }
+.btn-primary:hover { border-color: var(--accent-deep); background: var(--accent-deep); }
+.hero-note { margin-top: 22px; color: var(--muted); font-family: var(--mono); font-size: 10px; letter-spacing: .04em; }
+.hero-note strong { color: var(--ink); font-weight: 500; }
+.taxonomy { border: 1px solid var(--rule); background: var(--panel); box-shadow: var(--shadow); }
+.taxonomy-head { display: flex; align-items: center; justify-content: space-between; padding: 17px 20px; border-bottom: 1px solid var(--rule); }
+.taxonomy-head span:first-child { font-family: var(--mono); font-size: 10px; letter-spacing: .13em; text-transform: uppercase; color: var(--muted); }
+.live-dot { display: inline-flex; align-items: center; gap: 7px; color: var(--accent); font-family: var(--mono); font-size: 9px; letter-spacing: .1em; text-transform: uppercase; }
+.live-dot::before { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); content: ''; box-shadow: 0 0 0 4px var(--accent-wash); }
+.taxonomy-list { list-style: none; }
+.taxonomy-list li { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; padding: 13px 20px; border-bottom: 1px solid var(--rule); }
+.taxonomy-list li:last-child { border-bottom: 0; }
+.taxonomy-list a { font-family: var(--display); font-size: 1.24rem; text-decoration: none; }
+.taxonomy-list a:hover { color: var(--accent); }
+.taxonomy-count { color: var(--muted); font-family: var(--mono); font-size: 10px; }
+
+/* Stats */
+.stats { padding: 27px 0; border-bottom: 1px solid var(--rule); }
+.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+.stat strong { display: block; font-family: var(--display); font-size: 2.65rem; font-weight: 400; line-height: 1; }
+.stat span { display: block; max-width: 18ch; margin-top: 8px; color: var(--muted); font-family: var(--mono); font-size: 9px; letter-spacing: .1em; line-height: 1.55; text-transform: uppercase; }
+
+/* Library */
+.library { padding: 84px 0 110px; }
+.library-head { display: flex; align-items: end; justify-content: space-between; gap: 24px; margin-bottom: 34px; }
+.section-kicker { color: var(--accent); font-family: var(--mono); font-size: 10px; letter-spacing: .15em; text-transform: uppercase; }
+.library-title { margin-top: 7px; font-family: var(--display); font-size: clamp(2.3rem, 4vw, 3.7rem); font-weight: 400; line-height: .98; letter-spacing: -.035em; }
+.library-source { max-width: 290px; color: var(--muted); font-size: .84rem; text-align: right; }
+.library-source a { color: var(--accent); text-underline-offset: 3px; }
+.controls { display: grid; grid-template-columns: minmax(240px, 1fr) 190px 190px; gap: 10px; padding: 13px; border: 1px solid var(--rule); background: var(--panel); }
+.control { min-height: 43px; border: 1px solid var(--rule); background: var(--paper); color: var(--ink); padding: 0 13px; }
+.control:focus { border-color: var(--accent); outline: none; }
+.search-wrap { position: relative; }
+.search-wrap::before { position: absolute; top: 13px; left: 14px; color: var(--muted); content: '⌕'; font-size: 18px; line-height: 1; }
+.search { width: 100%; padding-left: 38px; }
+.results-bar { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin: 26px 0 14px; }
+.results-label { color: var(--muted); font-family: var(--mono); font-size: 10px; letter-spacing: .08em; text-transform: uppercase; }
+.results-label strong { color: var(--ink); font-weight: 500; }
+.results-tip { color: var(--muted); font-size: .82rem; }
+.catalog { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.card { min-height: 220px; display: flex; flex-direction: column; padding: 22px; border: 1px solid var(--rule); background: var(--panel); text-decoration: none; transition: transform .2s, border-color .2s, box-shadow .2s; }
+.card:hover { border-color: var(--accent); box-shadow: var(--shadow); transform: translateY(-3px); }
+.card-meta { display: flex; align-items: center; justify-content: space-between; gap: 10px; color: var(--accent); font-family: var(--mono); font-size: 9px; letter-spacing: .1em; text-transform: uppercase; }
+.card-type { color: var(--signal); }
+.card h3 { margin: 24px 0 auto; font-family: var(--display); font-size: 1.45rem; font-weight: 400; line-height: 1.08; letter-spacing: -.015em; }
+.card-foot { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 22px; padding-top: 12px; border-top: 1px solid var(--rule); color: var(--muted); font-family: var(--mono); font-size: 9px; letter-spacing: .06em; text-transform: uppercase; }
+.card-arrow { color: var(--accent); font-size: 16px; }
+.empty { grid-column: 1 / -1; padding: 50px 20px; border: 1px dashed var(--rule); color: var(--muted); text-align: center; }
+.load-more { display: flex; justify-content: center; margin-top: 30px; }
+
+/* Footer */
+.site-footer { padding: 30px 0; border-top: 1px solid var(--rule); }
+.footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.footer-copy, .footer-links { color: var(--muted); font-family: var(--mono); font-size: 9px; letter-spacing: .09em; line-height: 1.6; text-transform: uppercase; }
+.footer-links { display: flex; gap: 18px; }
+.footer-links a { color: var(--accent); text-decoration: none; }
+.footer-links a:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+@media (max-width: 900px) {
+  .hero-grid { grid-template-columns: 1fr; gap: 44px; }
+  .taxonomy { max-width: 580px; }
+  .catalog { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 640px) {
+  .wrap { width: min(100% - 32px, 1180px); }
+  .header-inner { min-height: 60px; }
+  .nav a { display: none; }
+  .hero { padding: 62px 0 54px; }
+  .hero-lede { font-size: 1rem; }
+  .stats-grid { grid-template-columns: 1fr 1fr; gap: 25px 16px; }
+  .stat strong { font-size: 2.2rem; }
+  .library { padding: 62px 0 80px; }
+  .library-head { display: block; }
+  .library-source { margin-top: 16px; text-align: left; }
+  .controls { grid-template-columns: 1fr; }
+  .results-bar { display: block; }
+  .results-tip { margin-top: 7px; }
+  .catalog { grid-template-columns: 1fr; }
+  .card { min-height: 190px; }
+  .footer-inner { align-items: start; flex-direction: column; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .card, .theme-toggle, .btn { transition: none; }
+}
+  </style>
+</head>
+<body>
+  <a class="skip" href="#library">Skip to research library</a>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="wordmark" href="#top" aria-label="iHealthcareAnalyst research library home">
+        <span class="wordmark-mark">i</span><span class="wordmark-text">iHealthcareAnalyst / library</span>
+      </a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="#library">Library</a>
+        <a href="https://www.ihealthcareanalyst.com/" target="_blank" rel="noopener">Consulting ↗</a>
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false">◐</button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <p class="kicker">Healthcare market intelligence</p>
+          <h1>Evidence for the decisions that move healthcare forward.</h1>
+          <p class="hero-lede">A structured index of analyst insights, press releases and published market research reports from iHealthcareAnalyst, covering the markets, technologies and services shaping life sciences.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#library">Explore the library ↓</a>
+            <a class="btn" href="https://www.ihealthcareanalyst.com/research-services/" target="_blank" rel="noopener">Research services ↗</a>
+          </div>
+          <p class="hero-note">Source of record: <strong>iHealthcareAnalyst.com</strong> · backlinks preserved on every title</p>
+        </div>
+        <aside class="taxonomy" aria-label="Research domains">
+          <div class="taxonomy-head"><span>Research map</span><span class="live-dot">Live index</span></div>
+          <ul class="taxonomy-list" id="taxonomy-list"></ul>
+        </aside>
+      </div>
+    </section>
+
+    <section class="stats" aria-label="Library statistics">
+      <div class="wrap stats-grid">
+        <div class="stat"><strong id="stat-total">1,511</strong><span>indexed titles</span></div>
+        <div class="stat"><strong id="stat-insights">681</strong><span>analyst insights &amp; press releases</span></div>
+        <div class="stat"><strong id="stat-reports">830</strong><span>published reports</span></div>
+        <div class="stat"><strong>7</strong><span>healthcare subdomains</span></div>
+      </div>
+    </section>
+
+    <section class="library" id="library">
+      <div class="wrap">
+        <div class="library-head">
+          <div>
+            <p class="section-kicker">The index</p>
+            <h2 class="library-title">Research library</h2>
+          </div>
+          <p class="library-source">Browse by subject, search by title, and follow every result to its canonical publication on <a href="https://www.ihealthcareanalyst.com/" target="_blank" rel="noopener">iHealthcareAnalyst.com</a>.</p>
+        </div>
+        <div class="controls" role="search">
+          <div class="search-wrap"><input class="control search" id="search" type="search" placeholder="Search reports, technologies, conditions..." autocomplete="off"></div>
+          <select class="control" id="category" aria-label="Filter by healthcare domain"><option value="all">All domains</option></select>
+          <select class="control" id="type" aria-label="Filter by publication type"><option value="all">All publications</option><option value="Report">Published reports</option><option value="Insight">Analyst insights &amp; press</option></select>
+        </div>
+        <div class="results-bar"><p class="results-label"><strong id="result-count">0</strong> matching titles</p><p class="results-tip">Select a card to read the original publication</p></div>
+        <div class="catalog" id="catalog" aria-live="polite"></div>
+        <div class="load-more"><button class="btn" id="load-more" type="button">Load more titles</button></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p class="footer-copy">Research library · sourced from the iHealthcareAnalyst sitemap index</p>
+      <div class="footer-links">
+        <a href="https://www.ihealthcareanalyst.com/sitemap_index.xml" target="_blank" rel="noopener">Sitemap source ↗</a>
+        <a href="https://www.ihealthcareanalyst.com/" target="_blank" rel="noopener">iHealthcareAnalyst ↗</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+(function () {
+  var catalog = [];
+  var filtered = [];
+  var visible = 30;
+  var category = document.getElementById('category');
+  var type = document.getElementById('type');
+  var search = document.getElementById('search');
+  var grid = document.getElementById('catalog');
+  var count = document.getElementById('result-count');
+  var more = document.getElementById('load-more');
+  var taxonomy = document.getElementById('taxonomy-list');
+  var categories = ['Animal health', 'Biotechnology', 'Pharmaceuticals', 'Clinical diagnostics', 'Hospital equipment', 'Healthcare IT', 'Healthcare services'];
+
+  function esc(value) {
+    return String(value).replace(/[&<>"']/g, function (char) { return ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[char]; });
+  }
+  function renderTaxonomy() {
+    taxonomy.innerHTML = categories.map(function (name) {
+      var total = catalog.filter(function (item) { return item.category === name; }).length;
+      return '<li><a href="#library" data-domain="' + esc(name) + '">' + esc(name) + '</a><span class="taxonomy-count">' + total + ' titles</span></li>';
+    }).join('');
+    taxonomy.querySelectorAll('[data-domain]').forEach(function (link) {
+      link.addEventListener('click', function () { category.value = link.dataset.domain; visible = 30; apply(); });
+    });
+  }
+  function apply() {
+    var query = search.value.trim().toLowerCase();
+    filtered = catalog.filter(function (item) {
+      return (category.value === 'all' || item.category === category.value) &&
+        (type.value === 'all' || item.type === type.value) &&
+        (!query || (item.title + ' ' + item.category + ' ' + item.type).toLowerCase().indexOf(query) !== -1);
+    });
+    count.textContent = filtered.length.toLocaleString();
+    render();
+  }
+  function render() {
+    var shown = filtered.slice(0, visible);
+    grid.innerHTML = shown.length ? shown.map(function (item) {
+      return '<a class="card" href="' + esc(item.url) + '" target="_blank" rel="noopener"><div class="card-meta"><span>' + esc(item.category) + '</span><span class="card-type">' + esc(item.type) + '</span></div><h3>' + esc(item.title) + '</h3><div class="card-foot"><span>Read on iHealthcareAnalyst</span><span class="card-arrow">↗</span></div></a>';
+    }).join('') : '<p class="empty">No titles match those filters. Try a broader search or another domain.</p>';
+    more.hidden = visible >= filtered.length;
+  }
+  function populate() {
+    categories.forEach(function (name) { category.insertAdjacentHTML('beforeend', '<option value="' + esc(name) + '">' + esc(name) + '</option>'); });
+    renderTaxonomy();
+    document.getElementById('stat-total').textContent = catalog.length.toLocaleString();
+    document.getElementById('stat-insights').textContent = catalog.filter(function (i) { return i.type === 'Insight'; }).length.toLocaleString();
+    document.getElementById('stat-reports').textContent = catalog.filter(function (i) { return i.type === 'Report'; }).length.toLocaleString();
+    apply();
+  }
+  fetch('sitemap-data/catalog.json').then(function (response) { if (!response.ok) throw new Error('catalog unavailable'); return response.json(); }).then(function (data) { catalog = data.items || []; populate(); }).catch(function () { grid.innerHTML = '<p class="empty">The research index is temporarily unavailable. Visit <a href="https://www.ihealthcareanalyst.com/" target="_blank" rel="noopener">iHealthcareAnalyst.com</a> for the current library.</p>'; more.hidden = true; });
+  [category, type].forEach(function (control) { control.addEventListener('change', function () { visible = 30; apply(); }); });
+  search.addEventListener('input', function () { visible = 30; apply(); });
+  more.addEventListener('click', function () { visible += 30; render(); });
+
+  var root = document.documentElement;
+  var toggle = document.getElementById('theme-toggle');
+  var stored = null;
+  try { stored = localStorage.getItem('research-theme'); } catch (error) {}
+  var theme = stored || 'light';
+  root.dataset.theme = theme;
+  toggle.setAttribute('aria-pressed', theme === 'dark' ? 'true' : 'false');
+  toggle.setAttribute('aria-label', theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme');
+  toggle.addEventListener('click', function () {
+    theme = root.dataset.theme === 'dark' ? 'light' : 'dark';
+    root.dataset.theme = theme;
+    toggle.setAttribute('aria-pressed', theme === 'dark' ? 'true' : 'false');
+    toggle.setAttribute('aria-label', theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme');
+    try { localStorage.setItem('research-theme', theme); } catch (error) {}
+  });
+})();
+  </script>
+</body>
+</html>
